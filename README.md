@@ -29,7 +29,7 @@ Ensure the following are installed on your system:
 1.  **Clone the Repository**
     Open your terminal and clone this repository to your local machine.
     ```bash
-    git clone https://github.com/kathir-23s/Tensor-Implementations.git
+    git clone https://github.com/kathir-23s//home/blu-bridge25/Study/Code/Tensor_Parallelism_impl/tenosr_parallelism/TensorParallelismBeta/DTensor_v2.0/Tensor-Implementations.git
     ```
 
 2.  **Navigate to the Directory**
