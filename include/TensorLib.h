@@ -31,6 +31,12 @@
 
 // Reductions Utils
 
-
+// Autograd System
+#include "autograd/Node.h"
+#include "autograd/Variable.h"
+#include "autograd/Engine.h"
+#include "autograd/operations/BinaryOps.h"
+#include "autograd/operations/MatrixOps.h"
+#include "autograd/operations/ArithmeticsOps.h"
 
 #endif // TOPS_LIB_H
