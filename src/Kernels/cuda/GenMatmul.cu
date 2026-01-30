@@ -295,6 +295,10 @@ __global__ void matmul_fp64_optimized(const double* __restrict__ A, const double
 
 template<typename T>
 void launch_optimized_matmul(const Tensor& A, const Tensor& B, Tensor& output, cudaStream_t stream) {
+   // Ensure we're on the correct device before launching kernels
+   int target_device = A.device().index;
+   cudaSetDevice(target_device);
+   
    const auto& ash = A.shape().dims, &bsh = B.shape().dims, &osh = output.shape().dims;
    int an = ash.size(), bn = bsh.size(), on = osh.size(), M = ash[an-2], K = ash[an-1], N = bsh[bn-1], tb = 1;
    for (int i = 0; i < on - 2; i++) tb *= osh[i];

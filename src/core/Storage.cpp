@@ -2,6 +2,7 @@
 #include "device/AllocatorRegistry.h"
 #include <stdexcept>
 #include <cstring>
+#include <iostream>
 
 #ifdef WITH_CUDA
 #include <cuda_runtime.h>
@@ -52,7 +53,20 @@ Storage::Storage(size_t nbytes, Dtype dtype, DeviceIndex device, Allocator* allo
     
     // Allocate memory if nbytes > 0
     if (nbytes_ > 0) {
+        #ifdef WITH_CUDA
+        // Device guard: ensure we're on the correct device for CUDA allocations
+        int saved_device = -1;
+        if (device_.is_cuda()) {
+            cudaGetDevice(&saved_device);
+            if (saved_device != device_.index) {
+                cudaSetDevice(device_.index);
+            }
+        }
+        #endif
+        
+        
         void* raw_ptr = allocator_->allocate(nbytes_);
+        
         if (raw_ptr == nullptr) {
             throw std::runtime_error("Storage: Failed to allocate " + 
                                    std::to_string(nbytes_) + " bytes");

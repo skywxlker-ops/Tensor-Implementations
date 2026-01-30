@@ -1,0 +1,1820 @@
+Compiling [CXX]: src/UnaryOps/cpu/TrigonometryCore.cpp
+Compiling [CXX]: src/UnaryOps/cpu/ConjugateCore.cpp
+Compiling [CXX]: src/UnaryOps/cpu/Exponents.cpp
+g++ -Iinclude -I/usr/local/cuda-12.6/include -DWITH_CUDA  -std=c++20 -fPIC -Wall -Wextra -g -fopenmp -c src/UnaryOps/cpu/TrigonometryCore.cpp -o lib/objects/src/UnaryOps/cpu/TrigonometryCore.o
+g++ -Iinclude -I/usr/local/cuda-12.6/include -DWITH_CUDA  -std=c++20 -fPIC -Wall -Wextra -g -fopenmp -c src/UnaryOps/cpu/ConjugateCore.cpp -o lib/objects/src/UnaryOps/cpu/ConjugateCore.o
+g++ -Iinclude -I/usr/local/cuda-12.6/include -DWITH_CUDA  -std=c++20 -fPIC -Wall -Wextra -g -fopenmp -c src/UnaryOps/cpu/Exponents.cpp -o lib/objects/src/UnaryOps/cpu/Exponents.o
+Compiling [CXX]: src/UnaryOps/cpu/ReductionUtils.cpp
+g++ -Iinclude -I/usr/local/cuda-12.6/include -DWITH_CUDA  -std=c++20 -fPIC -Wall -Wextra -g -fopenmp -c src/UnaryOps/cpu/ReductionUtils.cpp -o lib/objects/src/UnaryOps/cpu/ReductionUtils.o
+Compiling [CXX]: src/UnaryOps/cpu/Reduction.cpp
+g++ -Iinclude -I/usr/local/cuda-12.6/include -DWITH_CUDA  -std=c++20 -fPIC -Wall -Wextra -g -fopenmp -c src/UnaryOps/cpu/Reduction.cpp -o lib/objects/src/UnaryOps/cpu/Reduction.o
+Compiling [CXX]: src/UnaryOps/cpu/ArithmeticsCore.cpp
+g++ -Iinclude -I/usr/local/cuda-12.6/include -DWITH_CUDA  -std=c++20 -fPIC -Wall -Wextra -g -fopenmp -c src/UnaryOps/cpu/ArithmeticsCore.cpp -o lib/objects/src/UnaryOps/cpu/ArithmeticsCore.o
+Compiling [CXX]: src/UnaryOps/cpu/Arithmetics.cpp
+g++ -Iinclude -I/usr/local/cuda-12.6/include -DWITH_CUDA  -std=c++20 -fPIC -Wall -Wextra -g -fopenmp -c src/UnaryOps/cpu/Arithmetics.cpp -o lib/objects/src/UnaryOps/cpu/Arithmetics.o
+Compiling [CXX]: src/UnaryOps/cpu/ExponentCore.cpp
+Compiling [CXX]: src/UnaryOps/cpu/Trigonometry.cpp
+Compiling [CXX]: src/nn/NN.cpp
+g++ -Iinclude -I/usr/local/cuda-12.6/include -DWITH_CUDA  -std=c++20 -fPIC -Wall -Wextra -g -fopenmp -c src/UnaryOps/cpu/ExponentCore.cpp -o lib/objects/src/UnaryOps/cpu/ExponentCore.o
+g++ -Iinclude -I/usr/local/cuda-12.6/include -DWITH_CUDA  -std=c++20 -fPIC -Wall -Wextra -g -fopenmp -c src/UnaryOps/cpu/Trigonometry.cpp -o lib/objects/src/UnaryOps/cpu/Trigonometry.o
+Compiling [CXX]: src/nn/LayerNorm.cpp
+g++ -Iinclude -I/usr/local/cuda-12.6/include -DWITH_CUDA  -std=c++20 -fPIC -Wall -Wextra -g -fopenmp -c src/nn/NN.cpp -o lib/objects/src/nn/NN.o
+g++ -Iinclude -I/usr/local/cuda-12.6/include -DWITH_CUDA  -std=c++20 -fPIC -Wall -Wextra -g -fopenmp -c src/nn/LayerNorm.cpp -o lib/objects/src/nn/LayerNorm.o
+Compiling [CXX]: src/nn/optimizer/LossScaler.cpp
+Compiling [CXX]: src/nn/optimizer/Optim.cpp
+g++ -Iinclude -I/usr/local/cuda-12.6/include -DWITH_CUDA  -std=c++20 -fPIC -Wall -Wextra -g -fopenmp -c src/nn/optimizer/LossScaler.cpp -o lib/objects/src/nn/optimizer/LossScaler.o
+Compiling [CXX]: src/ScalarOps/cpu/ScalarOps.cpp
+g++ -Iinclude -I/usr/local/cuda-12.6/include -DWITH_CUDA  -std=c++20 -fPIC -Wall -Wextra -g -fopenmp -c src/nn/optimizer/Optim.cpp -o lib/objects/src/nn/optimizer/Optim.o
+g++ -Iinclude -I/usr/local/cuda-12.6/include -DWITH_CUDA  -std=c++20 -fPIC -Wall -Wextra -g -fopenmp -c src/ScalarOps/cpu/ScalarOps.cpp -o lib/objects/src/ScalarOps/cpu/ScalarOps.o
+Compiling [CXX]: src/ScalarOps/cpu/ScalarOpsDispatcher.cpp
+Compiling [CXX]: src/autograd/Node.cpp
+g++ -Iinclude -I/usr/local/cuda-12.6/include -DWITH_CUDA  -std=c++20 -fPIC -Wall -Wextra -g -fopenmp -c src/ScalarOps/cpu/ScalarOpsDispatcher.cpp -o lib/objects/src/ScalarOps/cpu/ScalarOpsDispatcher.o
+g++ -Iinclude -I/usr/local/cuda-12.6/include -DWITH_CUDA  -std=c++20 -fPIC -Wall -Wextra -g -fopenmp -c src/autograd/Node.cpp -o lib/objects/src/autograd/Node.o
+Compiling [CXX]: src/autograd/operations/NormalizationOps.cpp
+g++ -Iinclude -I/usr/local/cuda-12.6/include -DWITH_CUDA  -std=c++20 -fPIC -Wall -Wextra -g -fopenmp -c src/autograd/operations/NormalizationOps.cpp -o lib/objects/src/autograd/operations/NormalizationOps.o
+Compiling [CXX]: src/autograd/operations/ReductionOps.cpp
+g++ -Iinclude -I/usr/local/cuda-12.6/include -DWITH_CUDA  -std=c++20 -fPIC -Wall -Wextra -g -fopenmp -c src/autograd/operations/ReductionOps.cpp -o lib/objects/src/autograd/operations/ReductionOps.o
+Compiling [CXX]: src/autograd/operations/TrigonometryOps.cpp
+g++ -Iinclude -I/usr/local/cuda-12.6/include -DWITH_CUDA  -std=c++20 -fPIC -Wall -Wextra -g -fopenmp -c src/autograd/operations/TrigonometryOps.cpp -o lib/objects/src/autograd/operations/TrigonometryOps.o
+Compiling [CXX]: src/autograd/operations/ArithmeticsOps.cpp
+g++ -Iinclude -I/usr/local/cuda-12.6/include -DWITH_CUDA  -std=c++20 -fPIC -Wall -Wextra -g -fopenmp -c src/autograd/operations/ArithmeticsOps.cpp -o lib/objects/src/autograd/operations/ArithmeticsOps.o
+Compiling [CXX]: src/autograd/operations/ExponentsOps.cpp
+g++ -Iinclude -I/usr/local/cuda-12.6/include -DWITH_CUDA  -std=c++20 -fPIC -Wall -Wextra -g -fopenmp -c src/autograd/operations/ExponentsOps.cpp -o lib/objects/src/autograd/operations/ExponentsOps.o
+Compiling [CXX]: src/autograd/operations/MatrixOps.cpp
+g++ -Iinclude -I/usr/local/cuda-12.6/include -DWITH_CUDA  -std=c++20 -fPIC -Wall -Wextra -g -fopenmp -c src/autograd/operations/MatrixOps.cpp -o lib/objects/src/autograd/operations/MatrixOps.o
+Compiling [CXX]: src/autograd/operations/LossOps.cpp
+g++ -Iinclude -I/usr/local/cuda-12.6/include -DWITH_CUDA  -std=c++20 -fPIC -Wall -Wextra -g -fopenmp -c src/autograd/operations/LossOps.cpp -o lib/objects/src/autograd/operations/LossOps.o
+Compiling [CXX]: src/autograd/operations/EmbeddingOps.cpp
+g++ -Iinclude -I/usr/local/cuda-12.6/include -DWITH_CUDA  -std=c++20 -fPIC -Wall -Wextra -g -fopenmp -c src/autograd/operations/EmbeddingOps.cpp -o lib/objects/src/autograd/operations/EmbeddingOps.o
+Compiling [CXX]: src/autograd/operations/ActivationOps.cpp
+g++ -Iinclude -I/usr/local/cuda-12.6/include -DWITH_CUDA  -std=c++20 -fPIC -Wall -Wextra -g -fopenmp -c src/autograd/operations/ActivationOps.cpp -o lib/objects/src/autograd/operations/ActivationOps.o
+Compiling [CXX]: src/autograd/operations/ReshapeOps.cpp
+g++ -Iinclude -I/usr/local/cuda-12.6/include -DWITH_CUDA  -std=c++20 -fPIC -Wall -Wextra -g -fopenmp -c src/autograd/operations/ReshapeOps.cpp -o lib/objects/src/autograd/operations/ReshapeOps.o
+Compiling [CXX]: src/autograd/operations/BinaryOps.cpp
+g++ -Iinclude -I/usr/local/cuda-12.6/include -DWITH_CUDA  -std=c++20 -fPIC -Wall -Wextra -g -fopenmp -c src/autograd/operations/BinaryOps.cpp -o lib/objects/src/autograd/operations/BinaryOps.o
+Compiling [CXX]: src/autograd/Hooks.cpp
+g++ -Iinclude -I/usr/local/cuda-12.6/include -DWITH_CUDA  -std=c++20 -fPIC -Wall -Wextra -g -fopenmp -c src/autograd/Hooks.cpp -o lib/objects/src/autograd/Hooks.o
+Compiling [CXX]: src/autograd/backward/MatrixBackward.cpp
+g++ -Iinclude -I/usr/local/cuda-12.6/include -DWITH_CUDA  -std=c++20 -fPIC -Wall -Wextra -g -fopenmp -c src/autograd/backward/MatrixBackward.cpp -o lib/objects/src/autograd/backward/MatrixBackward.o
+Compiling [CXX]: src/autograd/backward/ReductionBackward.cpp
+g++ -Iinclude -I/usr/local/cuda-12.6/include -DWITH_CUDA  -std=c++20 -fPIC -Wall -Wextra -g -fopenmp -c src/autograd/backward/ReductionBackward.cpp -o lib/objects/src/autograd/backward/ReductionBackward.o
+Compiling [CXX]: src/autograd/backward/ExponentsBackward.cpp
+g++ -Iinclude -I/usr/local/cuda-12.6/include -DWITH_CUDA  -std=c++20 -fPIC -Wall -Wextra -g -fopenmp -c src/autograd/backward/ExponentsBackward.cpp -o lib/objects/src/autograd/backward/ExponentsBackward.o
+Compiling [CXX]: src/autograd/backward/ActivationBackward.cpp
+g++ -Iinclude -I/usr/local/cuda-12.6/include -DWITH_CUDA  -std=c++20 -fPIC -Wall -Wextra -g -fopenmp -c src/autograd/backward/ActivationBackward.cpp -o lib/objects/src/autograd/backward/ActivationBackward.o
+Compiling [CXX]: src/autograd/backward/EmbeddingBackward.cpp
+g++ -Iinclude -I/usr/local/cuda-12.6/include -DWITH_CUDA  -std=c++20 -fPIC -Wall -Wextra -g -fopenmp -c src/autograd/backward/EmbeddingBackward.cpp -o lib/objects/src/autograd/backward/EmbeddingBackward.o
+Compiling [CXX]: src/autograd/backward/NormalizationBackward.cpp
+g++ -Iinclude -I/usr/local/cuda-12.6/include -DWITH_CUDA  -std=c++20 -fPIC -Wall -Wextra -g -fopenmp -c src/autograd/backward/NormalizationBackward.cpp -o lib/objects/src/autograd/backward/NormalizationBackward.o
+Compiling [CXX]: src/autograd/backward/TrigonometryBackward.cpp
+g++ -Iinclude -I/usr/local/cuda-12.6/include -DWITH_CUDA  -std=c++20 -fPIC -Wall -Wextra -g -fopenmp -c src/autograd/backward/TrigonometryBackward.cpp -o lib/objects/src/autograd/backward/TrigonometryBackward.o
+Compiling [CXX]: src/autograd/backward/LossBackward.cpp
+g++ -Iinclude -I/usr/local/cuda-12.6/include -DWITH_CUDA  -std=c++20 -fPIC -Wall -Wextra -g -fopenmp -c src/autograd/backward/LossBackward.cpp -o lib/objects/src/autograd/backward/LossBackward.o
+Compiling [CXX]: src/autograd/backward/ArithmeticsBackward.cpp
+g++ -Iinclude -I/usr/local/cuda-12.6/include -DWITH_CUDA  -std=c++20 -fPIC -Wall -Wextra -g -fopenmp -c src/autograd/backward/ArithmeticsBackward.cpp -o lib/objects/src/autograd/backward/ArithmeticsBackward.o
+Compiling [CXX]: src/autograd/backward/GradAccumulator.cpp
+g++ -Iinclude -I/usr/local/cuda-12.6/include -DWITH_CUDA  -std=c++20 -fPIC -Wall -Wextra -g -fopenmp -c src/autograd/backward/GradAccumulator.cpp -o lib/objects/src/autograd/backward/GradAccumulator.o
+src/autograd/backward/EmbeddingBackward.cpp: In constructor ‘OwnTensor::autograd::EmbeddingBackward::EmbeddingBackward(const OwnTensor::Tensor&, int64_t, int)’:
+src/autograd/backward/EmbeddingBackward.cpp:17:85: warning: unused parameter ‘padding_idx’ [-Wunused-parameter]
+   17 | EmbeddingBackward::EmbeddingBackward(const Tensor& indices, int64_t vocab_size, int padding_idx)
+      |                                                                                 ~~~~^~~~~~~~~~~
+Compiling [CXX]: src/autograd/backward/BinaryBackward.cpp
+g++ -Iinclude -I/usr/local/cuda-12.6/include -DWITH_CUDA  -std=c++20 -fPIC -Wall -Wextra -g -fopenmp -c src/autograd/backward/BinaryBackward.cpp -o lib/objects/src/autograd/backward/BinaryBackward.o
+Compiling [CXX]: src/autograd/AnomalyMode.cpp
+g++ -Iinclude -I/usr/local/cuda-12.6/include -DWITH_CUDA  -std=c++20 -fPIC -Wall -Wextra -g -fopenmp -c src/autograd/AnomalyMode.cpp -o lib/objects/src/autograd/AnomalyMode.o
+Compiling [CXX]: src/autograd/Engine.cpp
+g++ -Iinclude -I/usr/local/cuda-12.6/include -DWITH_CUDA  -std=c++20 -fPIC -Wall -Wextra -g -fopenmp -c src/autograd/Engine.cpp -o lib/objects/src/autograd/Engine.o
+Compiling [CXX]: src/autograd/Variable.cpp
+g++ -Iinclude -I/usr/local/cuda-12.6/include -DWITH_CUDA  -std=c++20 -fPIC -Wall -Wextra -g -fopenmp -c src/autograd/Variable.cpp -o lib/objects/src/autograd/Variable.o
+Compiling [CXX]: src/autograd/ops_template.cpp
+g++ -Iinclude -I/usr/local/cuda-12.6/include -DWITH_CUDA  -std=c++20 -fPIC -Wall -Wextra -g -fopenmp -c src/autograd/ops_template.cpp -o lib/objects/src/autograd/ops_template.o
+Compiling [CXX]: src/autograd/SavedVariable.cpp
+g++ -Iinclude -I/usr/local/cuda-12.6/include -DWITH_CUDA  -std=c++20 -fPIC -Wall -Wextra -g -fopenmp -c src/autograd/SavedVariable.cpp -o lib/objects/src/autograd/SavedVariable.o
+Compiling [CXX]: src/device/DeviceCore.cpp
+g++ -Iinclude -I/usr/local/cuda-12.6/include -DWITH_CUDA  -std=c++20 -fPIC -Wall -Wextra -g -fopenmp -c src/device/DeviceCore.cpp -o lib/objects/src/device/DeviceCore.o
+Compiling [CXX]: src/device/PinnedCPUAllocator.cpp
+g++ -Iinclude -I/usr/local/cuda-12.6/include -DWITH_CUDA  -std=c++20 -fPIC -Wall -Wextra -g -fopenmp -c src/device/PinnedCPUAllocator.cpp -o lib/objects/src/device/PinnedCPUAllocator.o
+Compiling [CXX]: src/device/CPUAllocator.cpp
+g++ -Iinclude -I/usr/local/cuda-12.6/include -DWITH_CUDA  -std=c++20 -fPIC -Wall -Wextra -g -fopenmp -c src/device/CPUAllocator.cpp -o lib/objects/src/device/CPUAllocator.o
+Compiling [CXX]: src/device/cachingAllocator.cpp
+g++ -Iinclude -I/usr/local/cuda-12.6/include -DWITH_CUDA  -std=c++20 -fPIC -Wall -Wextra -g -fopenmp -c src/device/cachingAllocator.cpp -o lib/objects/src/device/cachingAllocator.o
+Compiling [CXX]: src/device/CUDAAllocator.cpp
+g++ -Iinclude -I/usr/local/cuda-12.6/include -DWITH_CUDA  -std=c++20 -fPIC -Wall -Wextra -g -fopenmp -c src/device/CUDAAllocator.cpp -o lib/objects/src/device/CUDAAllocator.o
+Compiling [CXX]: src/device/DeviceTransfer.cpp
+g++ -Iinclude -I/usr/local/cuda-12.6/include -DWITH_CUDA  -std=c++20 -fPIC -Wall -Wextra -g -fopenmp -c src/device/DeviceTransfer.cpp -o lib/objects/src/device/DeviceTransfer.o
+Compiling [CXX]: src/device/AllocatorRegistry.cpp
+g++ -Iinclude -I/usr/local/cuda-12.6/include -DWITH_CUDA  -std=c++20 -fPIC -Wall -Wextra -g -fopenmp -c src/device/AllocatorRegistry.cpp -o lib/objects/src/device/AllocatorRegistry.o
+Compiling [CXX]: src/Views/ViewOps.cpp
+g++ -Iinclude -I/usr/local/cuda-12.6/include -DWITH_CUDA  -std=c++20 -fPIC -Wall -Wextra -g -fopenmp -c src/Views/ViewOps.cpp -o lib/objects/src/Views/ViewOps.o
+src/autograd/backward/NormalizationBackward.cpp: In member function ‘virtual std::vector<OwnTensor::Tensor> OwnTensor::autograd::LayerNormBackward::apply(std::vector<OwnTensor::Tensor>&&)’:
+src/autograd/backward/NormalizationBackward.cpp:48:16: warning: unused variable ‘grad_gamma_ptr’ [-Wunused-variable]
+   48 |         float* grad_gamma_ptr = (weight.is_valid()) ? grad_weight.data<float>() : nullptr;
+      |                ^~~~~~~~~~~~~~
+src/autograd/backward/NormalizationBackward.cpp:49:16: warning: unused variable ‘grad_beta_ptr’ [-Wunused-variable]
+   49 |         float* grad_beta_ptr = (weight.is_valid()) ? grad_bias.data<float>() : nullptr;
+      |                ^~~~~~~~~~~~~
+Compiling [CXX]: src/Views/ViewUtils.cpp
+g++ -Iinclude -I/usr/local/cuda-12.6/include -DWITH_CUDA  -std=c++20 -fPIC -Wall -Wextra -g -fopenmp -c src/Views/ViewUtils.cpp -o lib/objects/src/Views/ViewUtils.o
+Compiling [CXX]: src/Kernels/cpu/GenMatmul.cpp
+g++ -Iinclude -I/usr/local/cuda-12.6/include -DWITH_CUDA  -std=c++20 -fPIC -Wall -Wextra -g -fopenmp -c src/Kernels/cpu/GenMatmul.cpp -o lib/objects/src/Kernels/cpu/GenMatmul.o
+Compiling [CXX]: src/compiler/cpu/ConditionalOps.cpp
+g++ -Iinclude -I/usr/local/cuda-12.6/include -DWITH_CUDA  -std=c++20 -fPIC -Wall -Wextra -g -fopenmp -c src/compiler/cpu/ConditionalOps.cpp -o lib/objects/src/compiler/cpu/ConditionalOps.o
+Compiling [CXX]: src/compiler/cpu/ConditionalOpsDispatcher.cpp
+g++ -Iinclude -I/usr/local/cuda-12.6/include -DWITH_CUDA  -std=c++20 -fPIC -Wall -Wextra -g -fopenmp -c src/compiler/cpu/ConditionalOpsDispatcher.cpp -o lib/objects/src/compiler/cpu/ConditionalOpsDispatcher.o
+Compiling [CXX]: src/TensorOps/cpu/TensorOps.cpp
+g++ -Iinclude -I/usr/local/cuda-12.6/include -DWITH_CUDA  -std=c++20 -fPIC -Wall -Wextra -g -fopenmp -c src/TensorOps/cpu/TensorOps.cpp -o lib/objects/src/TensorOps/cpu/TensorOps.o
+Compiling [CXX]: src/mlp-blocks/WeightInit.cpp
+g++ -Iinclude -I/usr/local/cuda-12.6/include -DWITH_CUDA  -std=c++20 -fPIC -Wall -Wextra -g -fopenmp -c src/mlp-blocks/WeightInit.cpp -o lib/objects/src/mlp-blocks/WeightInit.o
+Compiling [CXX]: src/mlp-blocks/layers.cpp
+g++ -Iinclude -I/usr/local/cuda-12.6/include -DWITH_CUDA  -std=c++20 -fPIC -Wall -Wextra -g -fopenmp -c src/mlp-blocks/layers.cpp -o lib/objects/src/mlp-blocks/layers.o
+Compiling [CXX]: src/mlp-blocks/activation.cpp
+g++ -Iinclude -I/usr/local/cuda-12.6/include -DWITH_CUDA  -std=c++20 -fPIC -Wall -Wextra -g -fopenmp -c src/mlp-blocks/activation.cpp -o lib/objects/src/mlp-blocks/activation.o
+Compiling [CXX]: src/mlp-blocks/loss.cpp
+g++ -Iinclude -I/usr/local/cuda-12.6/include -DWITH_CUDA  -std=c++20 -fPIC -Wall -Wextra -g -fopenmp -c src/mlp-blocks/loss.cpp -o lib/objects/src/mlp-blocks/loss.o
+Compiling [CXX]: src/core/Tensor.cpp
+g++ -Iinclude -I/usr/local/cuda-12.6/include -DWITH_CUDA  -std=c++20 -fPIC -Wall -Wextra -g -fopenmp -c src/core/Tensor.cpp -o lib/objects/src/core/Tensor.o
+Compiling [CXX]: src/core/AutogradMeta.cpp
+g++ -Iinclude -I/usr/local/cuda-12.6/include -DWITH_CUDA  -std=c++20 -fPIC -Wall -Wextra -g -fopenmp -c src/core/AutogradMeta.cpp -o lib/objects/src/core/AutogradMeta.o
+Compiling [CXX]: src/core/AsTypeTensor.cpp
+g++ -Iinclude -I/usr/local/cuda-12.6/include -DWITH_CUDA  -std=c++20 -fPIC -Wall -Wextra -g -fopenmp -c src/core/AsTypeTensor.cpp -o lib/objects/src/core/AsTypeTensor.o
+Compiling [CXX]: src/core/Storage.cpp
+g++ -Iinclude -I/usr/local/cuda-12.6/include -DWITH_CUDA  -std=c++20 -fPIC -Wall -Wextra -g -fopenmp -c src/core/Storage.cpp -o lib/objects/src/core/Storage.o
+Compiling [CXX]: src/core/TensorImpl.cpp
+g++ -Iinclude -I/usr/local/cuda-12.6/include -DWITH_CUDA  -std=c++20 -fPIC -Wall -Wextra -g -fopenmp -c src/core/TensorImpl.cpp -o lib/objects/src/core/TensorImpl.o
+Compiling [CXX]: src/core/TensorDelete.cpp
+g++ -Iinclude -I/usr/local/cuda-12.6/include -DWITH_CUDA  -std=c++20 -fPIC -Wall -Wextra -g -fopenmp -c src/core/TensorDelete.cpp -o lib/objects/src/core/TensorDelete.o
+Compiling [CXX]: src/core/TensorFactory.cpp
+g++ -Iinclude -I/usr/local/cuda-12.6/include -DWITH_CUDA  -std=c++20 -fPIC -Wall -Wextra -g -fopenmp -c src/core/TensorFactory.cpp -o lib/objects/src/core/TensorFactory.o
+Compiling [CXX]: src/core/TensorUtils.cpp
+g++ -Iinclude -I/usr/local/cuda-12.6/include -DWITH_CUDA  -std=c++20 -fPIC -Wall -Wextra -g -fopenmp -c src/core/TensorUtils.cpp -o lib/objects/src/core/TensorUtils.o
+src/core/Tensor.cpp: In instantiation of ‘OwnTensor::Tensor::slice(OwnTensor::Tensor&, size_t, size_t)::<lambda(auto:25)> [with auto:25 = short int]’:
+include/core/TensorDispatch.h:60:39:   required from ‘auto OwnTensor::dispatch_by_dtype(OwnTensor::Dtype, Func&&) [with Func = OwnTensor::Tensor::slice(OwnTensor::Tensor&, size_t, size_t)::<lambda(auto:25)>]’
+src/core/Tensor.cpp:1005:26:   required from here
+src/core/Tensor.cpp:1005:51: warning: unused parameter ‘dummy’ [-Wunused-parameter]
+ 1005 |         dispatch_by_dtype(tensor.dtype(),[&](auto dummy){
+      |                                              ~~~~~^~~~~
+src/core/Tensor.cpp: In instantiation of ‘OwnTensor::Tensor::slice(OwnTensor::Tensor&, size_t, size_t)::<lambda(auto:25)> [with auto:25 = int]’:
+include/core/TensorDispatch.h:61:39:   required from ‘auto OwnTensor::dispatch_by_dtype(OwnTensor::Dtype, Func&&) [with Func = OwnTensor::Tensor::slice(OwnTensor::Tensor&, size_t, size_t)::<lambda(auto:25)>]’
+src/core/Tensor.cpp:1005:26:   required from here
+src/core/Tensor.cpp:1005:51: warning: unused parameter ‘dummy’ [-Wunused-parameter]
+src/core/Tensor.cpp: In instantiation of ‘OwnTensor::Tensor::slice(OwnTensor::Tensor&, size_t, size_t)::<lambda(auto:25)> [with auto:25 = long int]’:
+include/core/TensorDispatch.h:62:39:   required from ‘auto OwnTensor::dispatch_by_dtype(OwnTensor::Dtype, Func&&) [with Func = OwnTensor::Tensor::slice(OwnTensor::Tensor&, size_t, size_t)::<lambda(auto:25)>]’
+src/core/Tensor.cpp:1005:26:   required from here
+src/core/Tensor.cpp:1005:51: warning: unused parameter ‘dummy’ [-Wunused-parameter]
+src/core/Tensor.cpp: In instantiation of ‘OwnTensor::Tensor::slice(OwnTensor::Tensor&, size_t, size_t)::<lambda(auto:25)> [with auto:25 = float]’:
+include/core/TensorDispatch.h:63:39:   required from ‘auto OwnTensor::dispatch_by_dtype(OwnTensor::Dtype, Func&&) [with Func = OwnTensor::Tensor::slice(OwnTensor::Tensor&, size_t, size_t)::<lambda(auto:25)>]’
+src/core/Tensor.cpp:1005:26:   required from here
+src/core/Tensor.cpp:1005:51: warning: unused parameter ‘dummy’ [-Wunused-parameter]
+src/core/Tensor.cpp: In instantiation of ‘OwnTensor::Tensor::slice(OwnTensor::Tensor&, size_t, size_t)::<lambda(auto:25)> [with auto:25 = double]’:
+include/core/TensorDispatch.h:64:39:   required from ‘auto OwnTensor::dispatch_by_dtype(OwnTensor::Dtype, Func&&) [with Func = OwnTensor::Tensor::slice(OwnTensor::Tensor&, size_t, size_t)::<lambda(auto:25)>]’
+src/core/Tensor.cpp:1005:26:   required from here
+src/core/Tensor.cpp:1005:51: warning: unused parameter ‘dummy’ [-Wunused-parameter]
+src/core/Tensor.cpp: In instantiation of ‘OwnTensor::Tensor::slice(OwnTensor::Tensor&, size_t, size_t)::<lambda(auto:25)> [with auto:25 = OwnTensor::bfloat16_t]’:
+include/core/TensorDispatch.h:65:39:   required from ‘auto OwnTensor::dispatch_by_dtype(OwnTensor::Dtype, Func&&) [with Func = OwnTensor::Tensor::slice(OwnTensor::Tensor&, size_t, size_t)::<lambda(auto:25)>]’
+src/core/Tensor.cpp:1005:26:   required from here
+src/core/Tensor.cpp:1005:51: warning: unused parameter ‘dummy’ [-Wunused-parameter]
+src/core/Tensor.cpp: In instantiation of ‘OwnTensor::Tensor::slice(OwnTensor::Tensor&, size_t, size_t)::<lambda(auto:25)> [with auto:25 = OwnTensor::float16_t]’:
+include/core/TensorDispatch.h:66:39:   required from ‘auto OwnTensor::dispatch_by_dtype(OwnTensor::Dtype, Func&&) [with Func = OwnTensor::Tensor::slice(OwnTensor::Tensor&, size_t, size_t)::<lambda(auto:25)>]’
+src/core/Tensor.cpp:1005:26:   required from here
+src/core/Tensor.cpp:1005:51: warning: unused parameter ‘dummy’ [-Wunused-parameter]
+src/core/Tensor.cpp: In instantiation of ‘OwnTensor::Tensor::slice(OwnTensor::Tensor&, size_t, size_t)::<lambda(auto:25)> [with auto:25 = bool]’:
+include/core/TensorDispatch.h:67:37:   required from ‘auto OwnTensor::dispatch_by_dtype(OwnTensor::Dtype, Func&&) [with Func = OwnTensor::Tensor::slice(OwnTensor::Tensor&, size_t, size_t)::<lambda(auto:25)>]’
+src/core/Tensor.cpp:1005:26:   required from here
+src/core/Tensor.cpp:1005:51: warning: unused parameter ‘dummy’ [-Wunused-parameter]
+src/core/Tensor.cpp: In instantiation of ‘OwnTensor::Tensor::slice(OwnTensor::Tensor&, size_t, size_t)::<lambda(auto:25)> [with auto:25 = unsigned char]’:
+include/core/TensorDispatch.h:68:36:   required from ‘auto OwnTensor::dispatch_by_dtype(OwnTensor::Dtype, Func&&) [with Func = OwnTensor::Tensor::slice(OwnTensor::Tensor&, size_t, size_t)::<lambda(auto:25)>]’
+src/core/Tensor.cpp:1005:26:   required from here
+src/core/Tensor.cpp:1005:51: warning: unused parameter ‘dummy’ [-Wunused-parameter]
+src/core/Tensor.cpp: In instantiation of ‘OwnTensor::Tensor::slice(OwnTensor::Tensor&, size_t, size_t)::<lambda(auto:25)> [with auto:25 = short unsigned int]’:
+include/core/TensorDispatch.h:69:37:   required from ‘auto OwnTensor::dispatch_by_dtype(OwnTensor::Dtype, Func&&) [with Func = OwnTensor::Tensor::slice(OwnTensor::Tensor&, size_t, size_t)::<lambda(auto:25)>]’
+src/core/Tensor.cpp:1005:26:   required from here
+src/core/Tensor.cpp:1005:51: warning: unused parameter ‘dummy’ [-Wunused-parameter]
+src/core/Tensor.cpp: In instantiation of ‘OwnTensor::Tensor::slice(OwnTensor::Tensor&, size_t, size_t)::<lambda(auto:25)> [with auto:25 = unsigned int]’:
+include/core/TensorDispatch.h:70:37:   required from ‘auto OwnTensor::dispatch_by_dtype(OwnTensor::Dtype, Func&&) [with Func = OwnTensor::Tensor::slice(OwnTensor::Tensor&, size_t, size_t)::<lambda(auto:25)>]’
+src/core/Tensor.cpp:1005:26:   required from here
+src/core/Tensor.cpp:1005:51: warning: unused parameter ‘dummy’ [-Wunused-parameter]
+src/core/Tensor.cpp: In instantiation of ‘OwnTensor::Tensor::slice(OwnTensor::Tensor&, size_t, size_t)::<lambda(auto:25)> [with auto:25 = long unsigned int]’:
+include/core/TensorDispatch.h:71:37:   required from ‘auto OwnTensor::dispatch_by_dtype(OwnTensor::Dtype, Func&&) [with Func = OwnTensor::Tensor::slice(OwnTensor::Tensor&, size_t, size_t)::<lambda(auto:25)>]’
+src/core/Tensor.cpp:1005:26:   required from here
+src/core/Tensor.cpp:1005:51: warning: unused parameter ‘dummy’ [-Wunused-parameter]
+src/core/Tensor.cpp: In instantiation of ‘OwnTensor::Tensor::slice(OwnTensor::Tensor&, size_t, size_t)::<lambda(auto:25)> [with auto:25 = OwnTensor::complex32_t]’:
+include/core/TensorDispatch.h:72:40:   required from ‘auto OwnTensor::dispatch_by_dtype(OwnTensor::Dtype, Func&&) [with Func = OwnTensor::Tensor::slice(OwnTensor::Tensor&, size_t, size_t)::<lambda(auto:25)>]’
+src/core/Tensor.cpp:1005:26:   required from here
+src/core/Tensor.cpp:1005:51: warning: unused parameter ‘dummy’ [-Wunused-parameter]
+src/core/Tensor.cpp: In instantiation of ‘OwnTensor::Tensor::slice(OwnTensor::Tensor&, size_t, size_t)::<lambda(auto:25)> [with auto:25 = OwnTensor::complex64_t]’:
+include/core/TensorDispatch.h:73:40:   required from ‘auto OwnTensor::dispatch_by_dtype(OwnTensor::Dtype, Func&&) [with Func = OwnTensor::Tensor::slice(OwnTensor::Tensor&, size_t, size_t)::<lambda(auto:25)>]’
+src/core/Tensor.cpp:1005:26:   required from here
+src/core/Tensor.cpp:1005:51: warning: unused parameter ‘dummy’ [-Wunused-parameter]
+src/core/Tensor.cpp: In instantiation of ‘OwnTensor::Tensor::slice(OwnTensor::Tensor&, size_t, size_t)::<lambda(auto:25)> [with auto:25 = OwnTensor::complex128_t]’:
+include/core/TensorDispatch.h:74:41:   required from ‘auto OwnTensor::dispatch_by_dtype(OwnTensor::Dtype, Func&&) [with Func = OwnTensor::Tensor::slice(OwnTensor::Tensor&, size_t, size_t)::<lambda(auto:25)>]’
+src/core/Tensor.cpp:1005:26:   required from here
+src/core/Tensor.cpp:1005:51: warning: unused parameter ‘dummy’ [-Wunused-parameter]
+Compiling [CUDA]: src/ops/IndexingOps.cu
+nvcc -Iinclude -I/usr/local/cuda-12.6/include -DWITH_CUDA  -std=c++20 -Xcompiler="-fPIC" -arch=sm_86 -g --expt-relaxed-constexpr -c src/ops/IndexingOps.cu -o lib/objects/src/ops/IndexingOps.o
+src/core/Storage.cpp: In constructor ‘OwnTensor::Storage::Storage(size_t, OwnTensor::Dtype, OwnTensor::DeviceIndex, OwnTensor::Allocator*)’:
+src/core/Storage.cpp:55:18: error: ‘cout’ is not a member of ‘std’
+   55 |             std::cout << "[DEBUG] Storage: Before memsetAsync, device=" << dev_before << ", stream=" << stream << ", ptr=" << raw_ptr << std::endl;
+      |                  ^~~~
+src/core/Storage.cpp:9:1: note: ‘std::cout’ is defined in header ‘<iostream>’; did you forget to ‘#include <iostream>’?
+    8 | #include "device/DeviceCore.h"
+  +++ |+#include <iostream>
+    9 | #endif
+src/core/AutogradMeta.cpp: In member function ‘virtual void OwnTensor::AutogradMeta::set_requires_grad(bool, OwnTensor::TensorImpl*)’:
+src/core/AutogradMeta.cpp:52:70: warning: unused parameter ‘self_impl’ [-Wunused-parameter]
+   52 | void AutogradMeta::set_requires_grad(bool requires_grad, TensorImpl* self_impl) {
+      |                                                          ~~~~~~~~~~~~^~~~~~~~~
+Compiling [CUDA]: src/UnaryOps/cuda/Exponents.cu
+nvcc -Iinclude -I/usr/local/cuda-12.6/include -DWITH_CUDA  -std=c++20 -Xcompiler="-fPIC" -arch=sm_86 -g --expt-relaxed-constexpr -c src/UnaryOps/cuda/Exponents.cu -o lib/objects/src/UnaryOps/cuda/Exponents.o
+make: *** [Makefile:72: lib/objects/src/core/Storage.o] Error 1
+make: *** Waiting for unfinished jobs....
+In file included from src/core/TensorImpl.cpp:1:
+include/core/TensorImpl.h: In constructor ‘OwnTensor::TensorImpl::TensorImpl(OwnTensor::Storage&&, const OwnTensor::Shape&, const OwnTensor::Stride&, int64_t, OwnTensor::Dtype, OwnTensor::DeviceIndex, OwnTensor::intrusive_ptr<OwnTensor::TensorImpl>)’:
+include/core/TensorImpl.h:174:17: warning: ‘OwnTensor::TensorImpl::device_’ will be initialized after [-Wreorder]
+  174 |     DeviceIndex device_;                         // Device location
+      |                 ^~~~~~~
+include/core/TensorImpl.h:167:31: warning:   ‘OwnTensor::intrusive_ptr<OwnTensor::TensorImpl> OwnTensor::TensorImpl::base_impl_’ [-Wreorder]
+  167 |     intrusive_ptr<TensorImpl> base_impl_;                  // Original tensor if this is a view
+      |                               ^~~~~~~~~~
+src/core/TensorImpl.cpp:18:1: warning:   when initialized here [-Wreorder]
+   18 | TensorImpl::TensorImpl(Storage&& storage,
+      | ^~~~~~~~~~
+In file included from src/core/TensorImpl.cpp:1:
+include/core/TensorImpl.h: In constructor ‘OwnTensor::TensorImpl::TensorImpl(const OwnTensor::Shape&, OwnTensor::Dtype, OwnTensor::DeviceIndex, bool)’:
+include/core/TensorImpl.h:174:17: warning: ‘OwnTensor::TensorImpl::device_’ will be initialized after [-Wreorder]
+  174 |     DeviceIndex device_;                         // Device location
+      |                 ^~~~~~~
+include/core/TensorImpl.h:172:13: warning:   ‘int64_t OwnTensor::TensorImpl::storage_offset_’ [-Wreorder]
+  172 |     int64_t storage_offset_;                     // Offset into storage
+      |             ^~~~~~~~~~~~~~~
+src/core/TensorImpl.cpp:36:1: warning:   when initialized here [-Wreorder]
+   36 | TensorImpl::TensorImpl(const Shape& shape,
+      | ^~~~~~~~~~
+src/core/TensorFactory.cpp: In instantiation of ‘OwnTensor::Tensor::empty(OwnTensor::Shape, OwnTensor::TensorOptions)::<lambda(auto:16)> [with auto:16 = short int]’:
+include/core/TensorDispatch.h:60:39:   required from ‘auto OwnTensor::dispatch_by_dtype(OwnTensor::Dtype, Func&&) [with Func = OwnTensor::Tensor::empty(OwnTensor::Shape, OwnTensor::TensorOptions)::<lambda(auto:16)>]’
+src/core/TensorFactory.cpp:89:30:   required from here
+src/core/TensorFactory.cpp:89:52: warning: unused parameter ‘dummy’ [-Wunused-parameter]
+   89 |             dispatch_by_dtype(opts.dtype, [&](auto dummy)
+      |                                               ~~~~~^~~~~
+src/core/TensorFactory.cpp: In instantiation of ‘OwnTensor::Tensor::empty(OwnTensor::Shape, OwnTensor::TensorOptions)::<lambda(auto:16)> [with auto:16 = int]’:
+include/core/TensorDispatch.h:61:39:   required from ‘auto OwnTensor::dispatch_by_dtype(OwnTensor::Dtype, Func&&) [with Func = OwnTensor::Tensor::empty(OwnTensor::Shape, OwnTensor::TensorOptions)::<lambda(auto:16)>]’
+src/core/TensorFactory.cpp:89:30:   required from here
+src/core/TensorFactory.cpp:89:52: warning: unused parameter ‘dummy’ [-Wunused-parameter]
+src/core/TensorFactory.cpp: In instantiation of ‘OwnTensor::Tensor::empty(OwnTensor::Shape, OwnTensor::TensorOptions)::<lambda(auto:16)> [with auto:16 = long int]’:
+include/core/TensorDispatch.h:62:39:   required from ‘auto OwnTensor::dispatch_by_dtype(OwnTensor::Dtype, Func&&) [with Func = OwnTensor::Tensor::empty(OwnTensor::Shape, OwnTensor::TensorOptions)::<lambda(auto:16)>]’
+src/core/TensorFactory.cpp:89:30:   required from here
+src/core/TensorFactory.cpp:89:52: warning: unused parameter ‘dummy’ [-Wunused-parameter]
+src/core/TensorFactory.cpp: In instantiation of ‘OwnTensor::Tensor::empty(OwnTensor::Shape, OwnTensor::TensorOptions)::<lambda(auto:16)> [with auto:16 = float]’:
+include/core/TensorDispatch.h:63:39:   required from ‘auto OwnTensor::dispatch_by_dtype(OwnTensor::Dtype, Func&&) [with Func = OwnTensor::Tensor::empty(OwnTensor::Shape, OwnTensor::TensorOptions)::<lambda(auto:16)>]’
+src/core/TensorFactory.cpp:89:30:   required from here
+src/core/TensorFactory.cpp:89:52: warning: unused parameter ‘dummy’ [-Wunused-parameter]
+src/core/TensorFactory.cpp: In instantiation of ‘OwnTensor::Tensor::empty(OwnTensor::Shape, OwnTensor::TensorOptions)::<lambda(auto:16)> [with auto:16 = double]’:
+include/core/TensorDispatch.h:64:39:   required from ‘auto OwnTensor::dispatch_by_dtype(OwnTensor::Dtype, Func&&) [with Func = OwnTensor::Tensor::empty(OwnTensor::Shape, OwnTensor::TensorOptions)::<lambda(auto:16)>]’
+src/core/TensorFactory.cpp:89:30:   required from here
+src/core/TensorFactory.cpp:89:52: warning: unused parameter ‘dummy’ [-Wunused-parameter]
+src/core/TensorFactory.cpp: In instantiation of ‘OwnTensor::Tensor::empty(OwnTensor::Shape, OwnTensor::TensorOptions)::<lambda(auto:16)> [with auto:16 = OwnTensor::bfloat16_t]’:
+include/core/TensorDispatch.h:65:39:   required from ‘auto OwnTensor::dispatch_by_dtype(OwnTensor::Dtype, Func&&) [with Func = OwnTensor::Tensor::empty(OwnTensor::Shape, OwnTensor::TensorOptions)::<lambda(auto:16)>]’
+src/core/TensorFactory.cpp:89:30:   required from here
+src/core/TensorFactory.cpp:89:52: warning: unused parameter ‘dummy’ [-Wunused-parameter]
+src/core/TensorFactory.cpp: In instantiation of ‘OwnTensor::Tensor::empty(OwnTensor::Shape, OwnTensor::TensorOptions)::<lambda(auto:16)> [with auto:16 = OwnTensor::float16_t]’:
+include/core/TensorDispatch.h:66:39:   required from ‘auto OwnTensor::dispatch_by_dtype(OwnTensor::Dtype, Func&&) [with Func = OwnTensor::Tensor::empty(OwnTensor::Shape, OwnTensor::TensorOptions)::<lambda(auto:16)>]’
+src/core/TensorFactory.cpp:89:30:   required from here
+src/core/TensorFactory.cpp:89:52: warning: unused parameter ‘dummy’ [-Wunused-parameter]
+src/core/TensorFactory.cpp: In instantiation of ‘OwnTensor::Tensor::empty(OwnTensor::Shape, OwnTensor::TensorOptions)::<lambda(auto:16)> [with auto:16 = bool]’:
+include/core/TensorDispatch.h:67:37:   required from ‘auto OwnTensor::dispatch_by_dtype(OwnTensor::Dtype, Func&&) [with Func = OwnTensor::Tensor::empty(OwnTensor::Shape, OwnTensor::TensorOptions)::<lambda(auto:16)>]’
+src/core/TensorFactory.cpp:89:30:   required from here
+src/core/TensorFactory.cpp:89:52: warning: unused parameter ‘dummy’ [-Wunused-parameter]
+src/core/TensorFactory.cpp: In instantiation of ‘OwnTensor::Tensor::empty(OwnTensor::Shape, OwnTensor::TensorOptions)::<lambda(auto:16)> [with auto:16 = unsigned char]’:
+include/core/TensorDispatch.h:68:36:   required from ‘auto OwnTensor::dispatch_by_dtype(OwnTensor::Dtype, Func&&) [with Func = OwnTensor::Tensor::empty(OwnTensor::Shape, OwnTensor::TensorOptions)::<lambda(auto:16)>]’
+src/core/TensorFactory.cpp:89:30:   required from here
+src/core/TensorFactory.cpp:89:52: warning: unused parameter ‘dummy’ [-Wunused-parameter]
+src/core/TensorFactory.cpp: In instantiation of ‘OwnTensor::Tensor::empty(OwnTensor::Shape, OwnTensor::TensorOptions)::<lambda(auto:16)> [with auto:16 = short unsigned int]’:
+include/core/TensorDispatch.h:69:37:   required from ‘auto OwnTensor::dispatch_by_dtype(OwnTensor::Dtype, Func&&) [with Func = OwnTensor::Tensor::empty(OwnTensor::Shape, OwnTensor::TensorOptions)::<lambda(auto:16)>]’
+src/core/TensorFactory.cpp:89:30:   required from here
+src/core/TensorFactory.cpp:89:52: warning: unused parameter ‘dummy’ [-Wunused-parameter]
+src/core/TensorFactory.cpp: In instantiation of ‘OwnTensor::Tensor::empty(OwnTensor::Shape, OwnTensor::TensorOptions)::<lambda(auto:16)> [with auto:16 = unsigned int]’:
+include/core/TensorDispatch.h:70:37:   required from ‘auto OwnTensor::dispatch_by_dtype(OwnTensor::Dtype, Func&&) [with Func = OwnTensor::Tensor::empty(OwnTensor::Shape, OwnTensor::TensorOptions)::<lambda(auto:16)>]’
+src/core/TensorFactory.cpp:89:30:   required from here
+src/core/TensorFactory.cpp:89:52: warning: unused parameter ‘dummy’ [-Wunused-parameter]
+src/core/TensorFactory.cpp: In instantiation of ‘OwnTensor::Tensor::empty(OwnTensor::Shape, OwnTensor::TensorOptions)::<lambda(auto:16)> [with auto:16 = long unsigned int]’:
+include/core/TensorDispatch.h:71:37:   required from ‘auto OwnTensor::dispatch_by_dtype(OwnTensor::Dtype, Func&&) [with Func = OwnTensor::Tensor::empty(OwnTensor::Shape, OwnTensor::TensorOptions)::<lambda(auto:16)>]’
+src/core/TensorFactory.cpp:89:30:   required from here
+src/core/TensorFactory.cpp:89:52: warning: unused parameter ‘dummy’ [-Wunused-parameter]
+src/core/TensorFactory.cpp: In instantiation of ‘OwnTensor::Tensor::empty(OwnTensor::Shape, OwnTensor::TensorOptions)::<lambda(auto:16)> [with auto:16 = OwnTensor::complex32_t]’:
+include/core/TensorDispatch.h:72:40:   required from ‘auto OwnTensor::dispatch_by_dtype(OwnTensor::Dtype, Func&&) [with Func = OwnTensor::Tensor::empty(OwnTensor::Shape, OwnTensor::TensorOptions)::<lambda(auto:16)>]’
+src/core/TensorFactory.cpp:89:30:   required from here
+src/core/TensorFactory.cpp:89:52: warning: unused parameter ‘dummy’ [-Wunused-parameter]
+src/core/TensorFactory.cpp: In instantiation of ‘OwnTensor::Tensor::empty(OwnTensor::Shape, OwnTensor::TensorOptions)::<lambda(auto:16)> [with auto:16 = OwnTensor::complex64_t]’:
+include/core/TensorDispatch.h:73:40:   required from ‘auto OwnTensor::dispatch_by_dtype(OwnTensor::Dtype, Func&&) [with Func = OwnTensor::Tensor::empty(OwnTensor::Shape, OwnTensor::TensorOptions)::<lambda(auto:16)>]’
+src/core/TensorFactory.cpp:89:30:   required from here
+src/core/TensorFactory.cpp:89:52: warning: unused parameter ‘dummy’ [-Wunused-parameter]
+src/core/TensorFactory.cpp: In instantiation of ‘OwnTensor::Tensor::empty(OwnTensor::Shape, OwnTensor::TensorOptions)::<lambda(auto:16)> [with auto:16 = OwnTensor::complex128_t]’:
+include/core/TensorDispatch.h:74:41:   required from ‘auto OwnTensor::dispatch_by_dtype(OwnTensor::Dtype, Func&&) [with Func = OwnTensor::Tensor::empty(OwnTensor::Shape, OwnTensor::TensorOptions)::<lambda(auto:16)>]’
+src/core/TensorFactory.cpp:89:30:   required from here
+src/core/TensorFactory.cpp:89:52: warning: unused parameter ‘dummy’ [-Wunused-parameter]
+src/core/TensorUtils.cpp:357:6: warning: ‘void OwnTensor::{anonymous}::print_recursive_data(std::ostream&, const OwnTensor::Tensor&, std::vector<long int>&, int, const OwnTensor::{anonymous}::PrintOptions&)’ defined but not used [-Wunused-function]
+  357 | void print_recursive_data(std::ostream& os,
+      |      ^~~~~~~~~~~~~~~~~~~~
+src/ops/IndexingOps.cu(72): warning #186-D: pointless comparison of unsigned integer with zero
+                      if (gathered_idx < 0 || gathered_idx >= input.shape().dims[dim]) {
+                                       ^
+          detected during:
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=unsigned char]" at line 88 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_integer_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 90
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=signed short]" at line 60 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 91
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+src/ops/IndexingOps.cu(72): warning #186-D: pointless comparison of unsigned integer with zero
+                      if (gathered_idx < 0 || gathered_idx >= input.shape().dims[dim]) {
+                                       ^
+          detected during:
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=unsigned short]" at line 89 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_integer_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 90
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=signed short]" at line 60 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 91
+
+src/ops/IndexingOps.cu(72): warning #186-D: pointless comparison of unsigned integer with zero
+                      if (gathered_idx < 0 || gathered_idx >= input.shape().dims[dim]) {
+                                       ^
+          detected during:
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=unsigned int]" at line 90 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_integer_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 90
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=signed short]" at line 60 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 91
+
+src/ops/IndexingOps.cu(72): warning #186-D: pointless comparison of unsigned integer with zero
+                      if (gathered_idx < 0 || gathered_idx >= input.shape().dims[dim]) {
+                                       ^
+          detected during:
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=unsigned long]" at line 91 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_integer_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 90
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=signed short]" at line 60 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 91
+
+src/ops/IndexingOps.cu(72): warning #186-D: pointless comparison of unsigned integer with zero
+                      if (gathered_idx < 0 || gathered_idx >= input.shape().dims[dim]) {
+                                       ^
+          detected during:
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=unsigned char]" at line 88 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_integer_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 90
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=signed int]" at line 61 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 91
+
+src/ops/IndexingOps.cu(72): warning #186-D: pointless comparison of unsigned integer with zero
+                      if (gathered_idx < 0 || gathered_idx >= input.shape().dims[dim]) {
+                                       ^
+          detected during:
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=unsigned short]" at line 89 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_integer_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 90
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=signed int]" at line 61 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 91
+
+src/ops/IndexingOps.cu(72): warning #186-D: pointless comparison of unsigned integer with zero
+                      if (gathered_idx < 0 || gathered_idx >= input.shape().dims[dim]) {
+                                       ^
+          detected during:
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=unsigned int]" at line 90 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_integer_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 90
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=signed int]" at line 61 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 91
+
+src/ops/IndexingOps.cu(72): warning #186-D: pointless comparison of unsigned integer with zero
+                      if (gathered_idx < 0 || gathered_idx >= input.shape().dims[dim]) {
+                                       ^
+          detected during:
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=unsigned long]" at line 91 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_integer_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 90
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=signed int]" at line 61 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 91
+
+src/ops/IndexingOps.cu(72): warning #186-D: pointless comparison of unsigned integer with zero
+                      if (gathered_idx < 0 || gathered_idx >= input.shape().dims[dim]) {
+                                       ^
+          detected during:
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=unsigned char]" at line 88 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_integer_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 90
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=signed long]" at line 62 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 91
+
+src/ops/IndexingOps.cu(72): warning #186-D: pointless comparison of unsigned integer with zero
+                      if (gathered_idx < 0 || gathered_idx >= input.shape().dims[dim]) {
+                                       ^
+          detected during:
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=unsigned short]" at line 89 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_integer_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 90
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=signed long]" at line 62 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 91
+
+src/ops/IndexingOps.cu(72): warning #186-D: pointless comparison of unsigned integer with zero
+                      if (gathered_idx < 0 || gathered_idx >= input.shape().dims[dim]) {
+                                       ^
+          detected during:
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=unsigned int]" at line 90 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_integer_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 90
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=signed long]" at line 62 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 91
+
+src/ops/IndexingOps.cu(72): warning #186-D: pointless comparison of unsigned integer with zero
+                      if (gathered_idx < 0 || gathered_idx >= input.shape().dims[dim]) {
+                                       ^
+          detected during:
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=unsigned long]" at line 91 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_integer_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 90
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=signed long]" at line 62 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 91
+
+src/ops/IndexingOps.cu(72): warning #186-D: pointless comparison of unsigned integer with zero
+                      if (gathered_idx < 0 || gathered_idx >= input.shape().dims[dim]) {
+                                       ^
+          detected during:
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=unsigned char]" at line 88 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_integer_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 90
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=float]" at line 63 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 91
+
+src/ops/IndexingOps.cu(72): warning #186-D: pointless comparison of unsigned integer with zero
+                      if (gathered_idx < 0 || gathered_idx >= input.shape().dims[dim]) {
+                                       ^
+          detected during:
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=unsigned short]" at line 89 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_integer_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 90
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=float]" at line 63 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 91
+
+src/ops/IndexingOps.cu(72): warning #186-D: pointless comparison of unsigned integer with zero
+                      if (gathered_idx < 0 || gathered_idx >= input.shape().dims[dim]) {
+                                       ^
+          detected during:
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=unsigned int]" at line 90 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_integer_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 90
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=float]" at line 63 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 91
+
+src/ops/IndexingOps.cu(72): warning #186-D: pointless comparison of unsigned integer with zero
+                      if (gathered_idx < 0 || gathered_idx >= input.shape().dims[dim]) {
+                                       ^
+          detected during:
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=unsigned long]" at line 91 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_integer_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 90
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=float]" at line 63 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 91
+
+src/ops/IndexingOps.cu(72): warning #186-D: pointless comparison of unsigned integer with zero
+                      if (gathered_idx < 0 || gathered_idx >= input.shape().dims[dim]) {
+                                       ^
+          detected during:
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=unsigned char]" at line 88 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_integer_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 90
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=double]" at line 64 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 91
+
+src/ops/IndexingOps.cu(72): warning #186-D: pointless comparison of unsigned integer with zero
+                      if (gathered_idx < 0 || gathered_idx >= input.shape().dims[dim]) {
+                                       ^
+          detected during:
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=unsigned short]" at line 89 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_integer_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 90
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=double]" at line 64 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 91
+
+src/ops/IndexingOps.cu(72): warning #186-D: pointless comparison of unsigned integer with zero
+                      if (gathered_idx < 0 || gathered_idx >= input.shape().dims[dim]) {
+                                       ^
+          detected during:
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=unsigned int]" at line 90 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_integer_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 90
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=double]" at line 64 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 91
+
+src/ops/IndexingOps.cu(72): warning #186-D: pointless comparison of unsigned integer with zero
+                      if (gathered_idx < 0 || gathered_idx >= input.shape().dims[dim]) {
+                                       ^
+          detected during:
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=unsigned long]" at line 91 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_integer_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 90
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=double]" at line 64 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 91
+
+src/ops/IndexingOps.cu(72): warning #186-D: pointless comparison of unsigned integer with zero
+                      if (gathered_idx < 0 || gathered_idx >= input.shape().dims[dim]) {
+                                       ^
+          detected during:
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=unsigned char]" at line 88 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_integer_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 90
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=OwnTensor::bfloat16_t]" at line 65 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 91
+
+src/ops/IndexingOps.cu(72): warning #186-D: pointless comparison of unsigned integer with zero
+                      if (gathered_idx < 0 || gathered_idx >= input.shape().dims[dim]) {
+                                       ^
+          detected during:
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=unsigned short]" at line 89 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_integer_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 90
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=OwnTensor::bfloat16_t]" at line 65 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 91
+
+src/ops/IndexingOps.cu(72): warning #186-D: pointless comparison of unsigned integer with zero
+                      if (gathered_idx < 0 || gathered_idx >= input.shape().dims[dim]) {
+                                       ^
+          detected during:
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=unsigned int]" at line 90 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_integer_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 90
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=OwnTensor::bfloat16_t]" at line 65 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 91
+
+src/ops/IndexingOps.cu(72): warning #186-D: pointless comparison of unsigned integer with zero
+                      if (gathered_idx < 0 || gathered_idx >= input.shape().dims[dim]) {
+                                       ^
+          detected during:
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=unsigned long]" at line 91 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_integer_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 90
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=OwnTensor::bfloat16_t]" at line 65 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 91
+
+src/ops/IndexingOps.cu(72): warning #186-D: pointless comparison of unsigned integer with zero
+                      if (gathered_idx < 0 || gathered_idx >= input.shape().dims[dim]) {
+                                       ^
+          detected during:
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=unsigned char]" at line 88 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_integer_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 90
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=OwnTensor::float16_t]" at line 66 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 91
+
+src/ops/IndexingOps.cu(72): warning #186-D: pointless comparison of unsigned integer with zero
+                      if (gathered_idx < 0 || gathered_idx >= input.shape().dims[dim]) {
+                                       ^
+          detected during:
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=unsigned short]" at line 89 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_integer_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 90
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=OwnTensor::float16_t]" at line 66 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 91
+
+src/ops/IndexingOps.cu(72): warning #186-D: pointless comparison of unsigned integer with zero
+                      if (gathered_idx < 0 || gathered_idx >= input.shape().dims[dim]) {
+                                       ^
+          detected during:
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=unsigned int]" at line 90 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_integer_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 90
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=OwnTensor::float16_t]" at line 66 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 91
+
+src/ops/IndexingOps.cu(72): warning #186-D: pointless comparison of unsigned integer with zero
+                      if (gathered_idx < 0 || gathered_idx >= input.shape().dims[dim]) {
+                                       ^
+          detected during:
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=unsigned long]" at line 91 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_integer_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 90
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=OwnTensor::float16_t]" at line 66 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 91
+
+src/ops/IndexingOps.cu(72): warning #186-D: pointless comparison of unsigned integer with zero
+                      if (gathered_idx < 0 || gathered_idx >= input.shape().dims[dim]) {
+                                       ^
+          detected during:
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=unsigned char]" at line 88 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_integer_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 90
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=bool]" at line 67 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 91
+
+src/ops/IndexingOps.cu(72): warning #186-D: pointless comparison of unsigned integer with zero
+                      if (gathered_idx < 0 || gathered_idx >= input.shape().dims[dim]) {
+                                       ^
+          detected during:
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=unsigned short]" at line 89 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_integer_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 90
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=bool]" at line 67 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 91
+
+src/ops/IndexingOps.cu(72): warning #186-D: pointless comparison of unsigned integer with zero
+                      if (gathered_idx < 0 || gathered_idx >= input.shape().dims[dim]) {
+                                       ^
+          detected during:
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=unsigned int]" at line 90 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_integer_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 90
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=bool]" at line 67 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 91
+
+src/ops/IndexingOps.cu(72): warning #186-D: pointless comparison of unsigned integer with zero
+                      if (gathered_idx < 0 || gathered_idx >= input.shape().dims[dim]) {
+                                       ^
+          detected during:
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=unsigned long]" at line 91 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_integer_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 90
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=bool]" at line 67 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 91
+
+src/ops/IndexingOps.cu(72): warning #186-D: pointless comparison of unsigned integer with zero
+                      if (gathered_idx < 0 || gathered_idx >= input.shape().dims[dim]) {
+                                       ^
+          detected during:
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=unsigned char]" at line 88 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_integer_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 90
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=unsigned char]" at line 68 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 91
+
+src/ops/IndexingOps.cu(72): warning #186-D: pointless comparison of unsigned integer with zero
+                      if (gathered_idx < 0 || gathered_idx >= input.shape().dims[dim]) {
+                                       ^
+          detected during:
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=unsigned short]" at line 89 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_integer_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 90
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=unsigned char]" at line 68 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 91
+
+src/ops/IndexingOps.cu(72): warning #186-D: pointless comparison of unsigned integer with zero
+                      if (gathered_idx < 0 || gathered_idx >= input.shape().dims[dim]) {
+                                       ^
+          detected during:
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=unsigned int]" at line 90 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_integer_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 90
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=unsigned char]" at line 68 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 91
+
+src/ops/IndexingOps.cu(72): warning #186-D: pointless comparison of unsigned integer with zero
+                      if (gathered_idx < 0 || gathered_idx >= input.shape().dims[dim]) {
+                                       ^
+          detected during:
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=unsigned long]" at line 91 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_integer_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 90
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=unsigned char]" at line 68 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 91
+
+src/ops/IndexingOps.cu(72): warning #186-D: pointless comparison of unsigned integer with zero
+                      if (gathered_idx < 0 || gathered_idx >= input.shape().dims[dim]) {
+                                       ^
+          detected during:
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=unsigned char]" at line 88 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_integer_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 90
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=unsigned short]" at line 69 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 91
+
+src/ops/IndexingOps.cu(72): warning #186-D: pointless comparison of unsigned integer with zero
+                      if (gathered_idx < 0 || gathered_idx >= input.shape().dims[dim]) {
+                                       ^
+          detected during:
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=unsigned short]" at line 89 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_integer_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 90
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=unsigned short]" at line 69 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 91
+
+src/ops/IndexingOps.cu(72): warning #186-D: pointless comparison of unsigned integer with zero
+                      if (gathered_idx < 0 || gathered_idx >= input.shape().dims[dim]) {
+                                       ^
+          detected during:
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=unsigned int]" at line 90 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_integer_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 90
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=unsigned short]" at line 69 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 91
+
+src/ops/IndexingOps.cu(72): warning #186-D: pointless comparison of unsigned integer with zero
+                      if (gathered_idx < 0 || gathered_idx >= input.shape().dims[dim]) {
+                                       ^
+          detected during:
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=unsigned long]" at line 91 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_integer_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 90
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=unsigned short]" at line 69 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 91
+
+src/ops/IndexingOps.cu(72): warning #186-D: pointless comparison of unsigned integer with zero
+                      if (gathered_idx < 0 || gathered_idx >= input.shape().dims[dim]) {
+                                       ^
+          detected during:
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=unsigned char]" at line 88 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_integer_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 90
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=unsigned int]" at line 70 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 91
+
+src/ops/IndexingOps.cu(72): warning #186-D: pointless comparison of unsigned integer with zero
+                      if (gathered_idx < 0 || gathered_idx >= input.shape().dims[dim]) {
+                                       ^
+          detected during:
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=unsigned short]" at line 89 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_integer_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 90
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=unsigned int]" at line 70 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 91
+
+src/ops/IndexingOps.cu(72): warning #186-D: pointless comparison of unsigned integer with zero
+                      if (gathered_idx < 0 || gathered_idx >= input.shape().dims[dim]) {
+                                       ^
+          detected during:
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=unsigned int]" at line 90 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_integer_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 90
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=unsigned int]" at line 70 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 91
+
+src/ops/IndexingOps.cu(72): warning #186-D: pointless comparison of unsigned integer with zero
+                      if (gathered_idx < 0 || gathered_idx >= input.shape().dims[dim]) {
+                                       ^
+          detected during:
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=unsigned long]" at line 91 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_integer_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 90
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=unsigned int]" at line 70 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 91
+
+src/ops/IndexingOps.cu(72): warning #186-D: pointless comparison of unsigned integer with zero
+                      if (gathered_idx < 0 || gathered_idx >= input.shape().dims[dim]) {
+                                       ^
+          detected during:
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=unsigned char]" at line 88 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_integer_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 90
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=unsigned long]" at line 71 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 91
+
+src/ops/IndexingOps.cu(72): warning #186-D: pointless comparison of unsigned integer with zero
+                      if (gathered_idx < 0 || gathered_idx >= input.shape().dims[dim]) {
+                                       ^
+          detected during:
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=unsigned short]" at line 89 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_integer_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 90
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=unsigned long]" at line 71 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 91
+
+src/ops/IndexingOps.cu(72): warning #186-D: pointless comparison of unsigned integer with zero
+                      if (gathered_idx < 0 || gathered_idx >= input.shape().dims[dim]) {
+                                       ^
+          detected during:
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=unsigned int]" at line 90 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_integer_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 90
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=unsigned long]" at line 71 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 91
+
+src/ops/IndexingOps.cu(72): warning #186-D: pointless comparison of unsigned integer with zero
+                      if (gathered_idx < 0 || gathered_idx >= input.shape().dims[dim]) {
+                                       ^
+          detected during:
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=unsigned long]" at line 91 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_integer_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 90
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=unsigned long]" at line 71 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 91
+
+src/ops/IndexingOps.cu(72): warning #186-D: pointless comparison of unsigned integer with zero
+                      if (gathered_idx < 0 || gathered_idx >= input.shape().dims[dim]) {
+                                       ^
+          detected during:
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=unsigned char]" at line 88 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_integer_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 90
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=OwnTensor::complex32_t]" at line 72 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 91
+
+src/ops/IndexingOps.cu(72): warning #186-D: pointless comparison of unsigned integer with zero
+                      if (gathered_idx < 0 || gathered_idx >= input.shape().dims[dim]) {
+                                       ^
+          detected during:
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=unsigned short]" at line 89 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_integer_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 90
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=OwnTensor::complex32_t]" at line 72 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 91
+
+src/ops/IndexingOps.cu(72): warning #186-D: pointless comparison of unsigned integer with zero
+                      if (gathered_idx < 0 || gathered_idx >= input.shape().dims[dim]) {
+                                       ^
+          detected during:
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=unsigned int]" at line 90 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_integer_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 90
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=OwnTensor::complex32_t]" at line 72 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 91
+
+src/ops/IndexingOps.cu(72): warning #186-D: pointless comparison of unsigned integer with zero
+                      if (gathered_idx < 0 || gathered_idx >= input.shape().dims[dim]) {
+                                       ^
+          detected during:
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=unsigned long]" at line 91 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_integer_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 90
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=OwnTensor::complex32_t]" at line 72 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 91
+
+src/ops/IndexingOps.cu(72): warning #186-D: pointless comparison of unsigned integer with zero
+                      if (gathered_idx < 0 || gathered_idx >= input.shape().dims[dim]) {
+                                       ^
+          detected during:
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=unsigned char]" at line 88 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_integer_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 90
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=OwnTensor::complex64_t]" at line 73 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 91
+
+src/ops/IndexingOps.cu(72): warning #186-D: pointless comparison of unsigned integer with zero
+                      if (gathered_idx < 0 || gathered_idx >= input.shape().dims[dim]) {
+                                       ^
+          detected during:
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=unsigned short]" at line 89 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_integer_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 90
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=OwnTensor::complex64_t]" at line 73 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 91
+
+src/ops/IndexingOps.cu(72): warning #186-D: pointless comparison of unsigned integer with zero
+                      if (gathered_idx < 0 || gathered_idx >= input.shape().dims[dim]) {
+                                       ^
+          detected during:
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=unsigned int]" at line 90 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_integer_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 90
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=OwnTensor::complex64_t]" at line 73 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 91
+
+src/ops/IndexingOps.cu(72): warning #186-D: pointless comparison of unsigned integer with zero
+                      if (gathered_idx < 0 || gathered_idx >= input.shape().dims[dim]) {
+                                       ^
+          detected during:
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=unsigned long]" at line 91 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_integer_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 90
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=OwnTensor::complex64_t]" at line 73 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 91
+
+src/ops/IndexingOps.cu(72): warning #186-D: pointless comparison of unsigned integer with zero
+                      if (gathered_idx < 0 || gathered_idx >= input.shape().dims[dim]) {
+                                       ^
+          detected during:
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=unsigned char]" at line 88 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_integer_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 90
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=OwnTensor::complex128_t]" at line 74 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 91
+
+src/ops/IndexingOps.cu(72): warning #186-D: pointless comparison of unsigned integer with zero
+                      if (gathered_idx < 0 || gathered_idx >= input.shape().dims[dim]) {
+                                       ^
+          detected during:
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=unsigned short]" at line 89 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_integer_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 90
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=OwnTensor::complex128_t]" at line 74 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 91
+
+src/ops/IndexingOps.cu(72): warning #186-D: pointless comparison of unsigned integer with zero
+                      if (gathered_idx < 0 || gathered_idx >= input.shape().dims[dim]) {
+                                       ^
+          detected during:
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=unsigned int]" at line 90 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_integer_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 90
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=OwnTensor::complex128_t]" at line 74 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 91
+
+src/ops/IndexingOps.cu(72): warning #186-D: pointless comparison of unsigned integer with zero
+                      if (gathered_idx < 0 || gathered_idx >= input.shape().dims[dim]) {
+                                       ^
+          detected during:
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=unsigned long]" at line 91 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_integer_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 90
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=OwnTensor::complex128_t]" at line 74 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 91
+
+src/ops/IndexingOps.cu(72): warning #186-D: pointless comparison of unsigned integer with zero
+                      if (gathered_idx < 0 || gathered_idx >= input.shape().dims[dim]) {
+                                       ^
+          detected during:
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=unsigned char]" at line 88 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_integer_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 90
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=signed short]" at line 60 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 91
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+src/ops/IndexingOps.cu(72): warning #186-D: pointless comparison of unsigned integer with zero
+                      if (gathered_idx < 0 || gathered_idx >= input.shape().dims[dim]) {
+                                       ^
+          detected during:
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=unsigned short]" at line 89 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_integer_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 90
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=signed short]" at line 60 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 91
+
+src/ops/IndexingOps.cu(72): warning #186-D: pointless comparison of unsigned integer with zero
+                      if (gathered_idx < 0 || gathered_idx >= input.shape().dims[dim]) {
+                                       ^
+          detected during:
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=unsigned int]" at line 90 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_integer_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 90
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=signed short]" at line 60 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 91
+
+src/ops/IndexingOps.cu(72): warning #186-D: pointless comparison of unsigned integer with zero
+                      if (gathered_idx < 0 || gathered_idx >= input.shape().dims[dim]) {
+                                       ^
+          detected during:
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=unsigned long]" at line 91 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_integer_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 90
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=signed short]" at line 60 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 91
+
+src/ops/IndexingOps.cu(72): warning #186-D: pointless comparison of unsigned integer with zero
+                      if (gathered_idx < 0 || gathered_idx >= input.shape().dims[dim]) {
+                                       ^
+          detected during:
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=unsigned char]" at line 88 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_integer_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 90
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=signed int]" at line 61 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 91
+
+src/ops/IndexingOps.cu(72): warning #186-D: pointless comparison of unsigned integer with zero
+                      if (gathered_idx < 0 || gathered_idx >= input.shape().dims[dim]) {
+                                       ^
+          detected during:
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=unsigned short]" at line 89 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_integer_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 90
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=signed int]" at line 61 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 91
+
+src/ops/IndexingOps.cu(72): warning #186-D: pointless comparison of unsigned integer with zero
+                      if (gathered_idx < 0 || gathered_idx >= input.shape().dims[dim]) {
+                                       ^
+          detected during:
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=unsigned int]" at line 90 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_integer_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 90
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=signed int]" at line 61 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 91
+
+src/ops/IndexingOps.cu(72): warning #186-D: pointless comparison of unsigned integer with zero
+                      if (gathered_idx < 0 || gathered_idx >= input.shape().dims[dim]) {
+                                       ^
+          detected during:
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=unsigned long]" at line 91 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_integer_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 90
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=signed int]" at line 61 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 91
+
+src/ops/IndexingOps.cu(72): warning #186-D: pointless comparison of unsigned integer with zero
+                      if (gathered_idx < 0 || gathered_idx >= input.shape().dims[dim]) {
+                                       ^
+          detected during:
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=unsigned char]" at line 88 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_integer_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 90
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=signed long]" at line 62 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 91
+
+src/ops/IndexingOps.cu(72): warning #186-D: pointless comparison of unsigned integer with zero
+                      if (gathered_idx < 0 || gathered_idx >= input.shape().dims[dim]) {
+                                       ^
+          detected during:
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=unsigned short]" at line 89 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_integer_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 90
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=signed long]" at line 62 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 91
+
+src/ops/IndexingOps.cu(72): warning #186-D: pointless comparison of unsigned integer with zero
+                      if (gathered_idx < 0 || gathered_idx >= input.shape().dims[dim]) {
+                                       ^
+          detected during:
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=unsigned int]" at line 90 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_integer_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 90
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=signed long]" at line 62 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 91
+
+src/ops/IndexingOps.cu(72): warning #186-D: pointless comparison of unsigned integer with zero
+                      if (gathered_idx < 0 || gathered_idx >= input.shape().dims[dim]) {
+                                       ^
+          detected during:
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=unsigned long]" at line 91 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_integer_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 90
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=signed long]" at line 62 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 91
+
+src/ops/IndexingOps.cu(72): warning #186-D: pointless comparison of unsigned integer with zero
+                      if (gathered_idx < 0 || gathered_idx >= input.shape().dims[dim]) {
+                                       ^
+          detected during:
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=unsigned char]" at line 88 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_integer_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 90
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=float]" at line 63 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 91
+
+src/ops/IndexingOps.cu(72): warning #186-D: pointless comparison of unsigned integer with zero
+                      if (gathered_idx < 0 || gathered_idx >= input.shape().dims[dim]) {
+                                       ^
+          detected during:
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=unsigned short]" at line 89 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_integer_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 90
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=float]" at line 63 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 91
+
+src/ops/IndexingOps.cu(72): warning #186-D: pointless comparison of unsigned integer with zero
+                      if (gathered_idx < 0 || gathered_idx >= input.shape().dims[dim]) {
+                                       ^
+          detected during:
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=unsigned int]" at line 90 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_integer_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 90
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=float]" at line 63 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 91
+
+src/ops/IndexingOps.cu(72): warning #186-D: pointless comparison of unsigned integer with zero
+                      if (gathered_idx < 0 || gathered_idx >= input.shape().dims[dim]) {
+                                       ^
+          detected during:
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=unsigned long]" at line 91 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_integer_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 90
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=float]" at line 63 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 91
+
+src/ops/IndexingOps.cu(72): warning #186-D: pointless comparison of unsigned integer with zero
+                      if (gathered_idx < 0 || gathered_idx >= input.shape().dims[dim]) {
+                                       ^
+          detected during:
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=unsigned char]" at line 88 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_integer_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 90
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=double]" at line 64 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 91
+
+src/ops/IndexingOps.cu(72): warning #186-D: pointless comparison of unsigned integer with zero
+                      if (gathered_idx < 0 || gathered_idx >= input.shape().dims[dim]) {
+                                       ^
+          detected during:
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=unsigned short]" at line 89 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_integer_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 90
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=double]" at line 64 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 91
+
+src/ops/IndexingOps.cu(72): warning #186-D: pointless comparison of unsigned integer with zero
+                      if (gathered_idx < 0 || gathered_idx >= input.shape().dims[dim]) {
+                                       ^
+          detected during:
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=unsigned int]" at line 90 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_integer_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 90
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=double]" at line 64 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 91
+
+src/ops/IndexingOps.cu(72): warning #186-D: pointless comparison of unsigned integer with zero
+                      if (gathered_idx < 0 || gathered_idx >= input.shape().dims[dim]) {
+                                       ^
+          detected during:
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=unsigned long]" at line 91 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_integer_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 90
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=double]" at line 64 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 91
+
+src/ops/IndexingOps.cu(72): warning #186-D: pointless comparison of unsigned integer with zero
+                      if (gathered_idx < 0 || gathered_idx >= input.shape().dims[dim]) {
+                                       ^
+          detected during:
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=unsigned char]" at line 88 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_integer_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 90
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=OwnTensor::bfloat16_t]" at line 65 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 91
+
+src/ops/IndexingOps.cu(72): warning #186-D: pointless comparison of unsigned integer with zero
+                      if (gathered_idx < 0 || gathered_idx >= input.shape().dims[dim]) {
+                                       ^
+          detected during:
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=unsigned short]" at line 89 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_integer_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 90
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=OwnTensor::bfloat16_t]" at line 65 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 91
+
+src/ops/IndexingOps.cu(72): warning #186-D: pointless comparison of unsigned integer with zero
+                      if (gathered_idx < 0 || gathered_idx >= input.shape().dims[dim]) {
+                                       ^
+          detected during:
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=unsigned int]" at line 90 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_integer_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 90
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=OwnTensor::bfloat16_t]" at line 65 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 91
+
+src/ops/IndexingOps.cu(72): warning #186-D: pointless comparison of unsigned integer with zero
+                      if (gathered_idx < 0 || gathered_idx >= input.shape().dims[dim]) {
+                                       ^
+          detected during:
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=unsigned long]" at line 91 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_integer_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 90
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=OwnTensor::bfloat16_t]" at line 65 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 91
+
+src/ops/IndexingOps.cu(72): warning #186-D: pointless comparison of unsigned integer with zero
+                      if (gathered_idx < 0 || gathered_idx >= input.shape().dims[dim]) {
+                                       ^
+          detected during:
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=unsigned char]" at line 88 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_integer_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 90
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=OwnTensor::float16_t]" at line 66 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 91
+
+src/ops/IndexingOps.cu(72): warning #186-D: pointless comparison of unsigned integer with zero
+                      if (gathered_idx < 0 || gathered_idx >= input.shape().dims[dim]) {
+                                       ^
+          detected during:
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=unsigned short]" at line 89 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_integer_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 90
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=OwnTensor::float16_t]" at line 66 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 91
+
+src/ops/IndexingOps.cu(72): warning #186-D: pointless comparison of unsigned integer with zero
+                      if (gathered_idx < 0 || gathered_idx >= input.shape().dims[dim]) {
+                                       ^
+          detected during:
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=unsigned int]" at line 90 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_integer_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 90
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=OwnTensor::float16_t]" at line 66 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 91
+
+src/ops/IndexingOps.cu(72): warning #186-D: pointless comparison of unsigned integer with zero
+                      if (gathered_idx < 0 || gathered_idx >= input.shape().dims[dim]) {
+                                       ^
+          detected during:
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=unsigned long]" at line 91 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_integer_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 90
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=OwnTensor::float16_t]" at line 66 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 91
+
+src/ops/IndexingOps.cu(72): warning #186-D: pointless comparison of unsigned integer with zero
+                      if (gathered_idx < 0 || gathered_idx >= input.shape().dims[dim]) {
+                                       ^
+          detected during:
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=unsigned char]" at line 88 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_integer_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 90
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=__nv_bool]" at line 67 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 91
+
+src/ops/IndexingOps.cu(72): warning #186-D: pointless comparison of unsigned integer with zero
+                      if (gathered_idx < 0 || gathered_idx >= input.shape().dims[dim]) {
+                                       ^
+          detected during:
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=unsigned short]" at line 89 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_integer_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 90
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=__nv_bool]" at line 67 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 91
+
+src/ops/IndexingOps.cu(72): warning #186-D: pointless comparison of unsigned integer with zero
+                      if (gathered_idx < 0 || gathered_idx >= input.shape().dims[dim]) {
+                                       ^
+          detected during:
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=unsigned int]" at line 90 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_integer_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 90
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=__nv_bool]" at line 67 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 91
+
+src/ops/IndexingOps.cu(72): warning #186-D: pointless comparison of unsigned integer with zero
+                      if (gathered_idx < 0 || gathered_idx >= input.shape().dims[dim]) {
+                                       ^
+          detected during:
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=unsigned long]" at line 91 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_integer_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 90
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=__nv_bool]" at line 67 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 91
+
+src/ops/IndexingOps.cu(72): warning #186-D: pointless comparison of unsigned integer with zero
+                      if (gathered_idx < 0 || gathered_idx >= input.shape().dims[dim]) {
+                                       ^
+          detected during:
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=unsigned char]" at line 88 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_integer_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 90
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=unsigned char]" at line 68 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 91
+
+src/ops/IndexingOps.cu(72): warning #186-D: pointless comparison of unsigned integer with zero
+                      if (gathered_idx < 0 || gathered_idx >= input.shape().dims[dim]) {
+                                       ^
+          detected during:
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=unsigned short]" at line 89 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_integer_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 90
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=unsigned char]" at line 68 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 91
+
+src/ops/IndexingOps.cu(72): warning #186-D: pointless comparison of unsigned integer with zero
+                      if (gathered_idx < 0 || gathered_idx >= input.shape().dims[dim]) {
+                                       ^
+          detected during:
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=unsigned int]" at line 90 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_integer_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 90
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=unsigned char]" at line 68 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 91
+
+src/ops/IndexingOps.cu(72): warning #186-D: pointless comparison of unsigned integer with zero
+                      if (gathered_idx < 0 || gathered_idx >= input.shape().dims[dim]) {
+                                       ^
+          detected during:
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=unsigned long]" at line 91 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_integer_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 90
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=unsigned char]" at line 68 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 91
+
+src/ops/IndexingOps.cu(72): warning #186-D: pointless comparison of unsigned integer with zero
+                      if (gathered_idx < 0 || gathered_idx >= input.shape().dims[dim]) {
+                                       ^
+          detected during:
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=unsigned char]" at line 88 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_integer_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 90
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=unsigned short]" at line 69 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 91
+
+src/ops/IndexingOps.cu(72): warning #186-D: pointless comparison of unsigned integer with zero
+                      if (gathered_idx < 0 || gathered_idx >= input.shape().dims[dim]) {
+                                       ^
+          detected during:
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=unsigned short]" at line 89 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_integer_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 90
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=unsigned short]" at line 69 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 91
+
+src/ops/IndexingOps.cu(72): warning #186-D: pointless comparison of unsigned integer with zero
+                      if (gathered_idx < 0 || gathered_idx >= input.shape().dims[dim]) {
+                                       ^
+          detected during:
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=unsigned int]" at line 90 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_integer_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 90
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=unsigned short]" at line 69 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 91
+
+src/ops/IndexingOps.cu(72): warning #186-D: pointless comparison of unsigned integer with zero
+                      if (gathered_idx < 0 || gathered_idx >= input.shape().dims[dim]) {
+                                       ^
+          detected during:
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=unsigned long]" at line 91 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_integer_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 90
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=unsigned short]" at line 69 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 91
+
+src/ops/IndexingOps.cu(72): warning #186-D: pointless comparison of unsigned integer with zero
+                      if (gathered_idx < 0 || gathered_idx >= input.shape().dims[dim]) {
+                                       ^
+          detected during:
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=unsigned char]" at line 88 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_integer_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 90
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=unsigned int]" at line 70 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 91
+
+src/ops/IndexingOps.cu(72): warning #186-D: pointless comparison of unsigned integer with zero
+                      if (gathered_idx < 0 || gathered_idx >= input.shape().dims[dim]) {
+                                       ^
+          detected during:
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=unsigned short]" at line 89 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_integer_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 90
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=unsigned int]" at line 70 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 91
+
+src/ops/IndexingOps.cu(72): warning #186-D: pointless comparison of unsigned integer with zero
+                      if (gathered_idx < 0 || gathered_idx >= input.shape().dims[dim]) {
+                                       ^
+          detected during:
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=unsigned int]" at line 90 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_integer_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 90
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=unsigned int]" at line 70 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 91
+
+src/ops/IndexingOps.cu(72): warning #186-D: pointless comparison of unsigned integer with zero
+                      if (gathered_idx < 0 || gathered_idx >= input.shape().dims[dim]) {
+                                       ^
+          detected during:
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=unsigned long]" at line 91 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_integer_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 90
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=unsigned int]" at line 70 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 91
+
+src/ops/IndexingOps.cu(72): warning #186-D: pointless comparison of unsigned integer with zero
+                      if (gathered_idx < 0 || gathered_idx >= input.shape().dims[dim]) {
+                                       ^
+          detected during:
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=unsigned char]" at line 88 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_integer_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 90
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=unsigned long]" at line 71 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 91
+
+src/ops/IndexingOps.cu(72): warning #186-D: pointless comparison of unsigned integer with zero
+                      if (gathered_idx < 0 || gathered_idx >= input.shape().dims[dim]) {
+                                       ^
+          detected during:
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=unsigned short]" at line 89 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_integer_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 90
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=unsigned long]" at line 71 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 91
+
+src/ops/IndexingOps.cu(72): warning #186-D: pointless comparison of unsigned integer with zero
+                      if (gathered_idx < 0 || gathered_idx >= input.shape().dims[dim]) {
+                                       ^
+          detected during:
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=unsigned int]" at line 90 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_integer_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 90
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=unsigned long]" at line 71 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 91
+
+src/ops/IndexingOps.cu(72): warning #186-D: pointless comparison of unsigned integer with zero
+                      if (gathered_idx < 0 || gathered_idx >= input.shape().dims[dim]) {
+                                       ^
+          detected during:
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=unsigned long]" at line 91 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_integer_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 90
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=unsigned long]" at line 71 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 91
+
+src/ops/IndexingOps.cu(72): warning #186-D: pointless comparison of unsigned integer with zero
+                      if (gathered_idx < 0 || gathered_idx >= input.shape().dims[dim]) {
+                                       ^
+          detected during:
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=unsigned char]" at line 88 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_integer_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 90
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=OwnTensor::complex32_t]" at line 72 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 91
+
+src/ops/IndexingOps.cu(72): warning #186-D: pointless comparison of unsigned integer with zero
+                      if (gathered_idx < 0 || gathered_idx >= input.shape().dims[dim]) {
+                                       ^
+          detected during:
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=unsigned short]" at line 89 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_integer_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 90
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=OwnTensor::complex32_t]" at line 72 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 91
+
+src/ops/IndexingOps.cu(72): warning #186-D: pointless comparison of unsigned integer with zero
+                      if (gathered_idx < 0 || gathered_idx >= input.shape().dims[dim]) {
+                                       ^
+          detected during:
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=unsigned int]" at line 90 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_integer_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 90
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=OwnTensor::complex32_t]" at line 72 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 91
+
+src/ops/IndexingOps.cu(72): warning #186-D: pointless comparison of unsigned integer with zero
+                      if (gathered_idx < 0 || gathered_idx >= input.shape().dims[dim]) {
+                                       ^
+          detected during:
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=unsigned long]" at line 91 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_integer_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 90
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=OwnTensor::complex32_t]" at line 72 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 91
+
+src/ops/IndexingOps.cu(72): warning #186-D: pointless comparison of unsigned integer with zero
+                      if (gathered_idx < 0 || gathered_idx >= input.shape().dims[dim]) {
+                                       ^
+          detected during:
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=unsigned char]" at line 88 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_integer_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 90
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=OwnTensor::complex64_t]" at line 73 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 91
+
+src/ops/IndexingOps.cu(72): warning #186-D: pointless comparison of unsigned integer with zero
+                      if (gathered_idx < 0 || gathered_idx >= input.shape().dims[dim]) {
+                                       ^
+          detected during:
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=unsigned short]" at line 89 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_integer_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 90
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=OwnTensor::complex64_t]" at line 73 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 91
+
+src/ops/IndexingOps.cu(72): warning #186-D: pointless comparison of unsigned integer with zero
+                      if (gathered_idx < 0 || gathered_idx >= input.shape().dims[dim]) {
+                                       ^
+          detected during:
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=unsigned int]" at line 90 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_integer_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 90
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=OwnTensor::complex64_t]" at line 73 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 91
+
+src/ops/IndexingOps.cu(72): warning #186-D: pointless comparison of unsigned integer with zero
+                      if (gathered_idx < 0 || gathered_idx >= input.shape().dims[dim]) {
+                                       ^
+          detected during:
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=unsigned long]" at line 91 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_integer_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 90
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=OwnTensor::complex64_t]" at line 73 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 91
+
+src/ops/IndexingOps.cu(72): warning #186-D: pointless comparison of unsigned integer with zero
+                      if (gathered_idx < 0 || gathered_idx >= input.shape().dims[dim]) {
+                                       ^
+          detected during:
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=unsigned char]" at line 88 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_integer_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 90
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=OwnTensor::complex128_t]" at line 74 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 91
+
+src/ops/IndexingOps.cu(72): warning #186-D: pointless comparison of unsigned integer with zero
+                      if (gathered_idx < 0 || gathered_idx >= input.shape().dims[dim]) {
+                                       ^
+          detected during:
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=unsigned short]" at line 89 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_integer_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 90
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=OwnTensor::complex128_t]" at line 74 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 91
+
+src/ops/IndexingOps.cu(72): warning #186-D: pointless comparison of unsigned integer with zero
+                      if (gathered_idx < 0 || gathered_idx >= input.shape().dims[dim]) {
+                                       ^
+          detected during:
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=unsigned int]" at line 90 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_integer_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 90
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=OwnTensor::complex128_t]" at line 74 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 91
+
+src/ops/IndexingOps.cu(72): warning #186-D: pointless comparison of unsigned integer with zero
+                      if (gathered_idx < 0 || gathered_idx >= input.shape().dims[dim]) {
+                                       ^
+          detected during:
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=unsigned long]" at line 91 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_integer_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 90
+            instantiation of function "lambda [](auto)->auto [with <auto-1>=OwnTensor::complex128_t]" at line 74 of include/core/TensorDispatch.h
+            instantiation of "auto OwnTensor::dispatch_by_dtype(OwnTensor::Dtype, Func &&) [with Func=lambda [](auto)->auto]" at line 91
+
+include/ops/helpers/IndexingKernels.h(27): warning #186-D: pointless comparison of unsigned integer with zero
+      if (gathered_idx < 0 || (int64_t)gathered_idx >= in_dims[dim]) {
+                       ^
+          detected during:
+            instantiation of "void OwnTensor::cuda::gather_kernel(const T *, const T_idx *, T *, int64_t, const int64_t *, const int64_t *, const int64_t *, const int64_t *, int, int64_t) [with T=signed short, T_idx=unsigned char]" at line 69
+            instantiation of "void OwnTensor::cuda::gather_cuda(const T *, const T_idx *, T *, int64_t, const int64_t *, const int64_t *, const int64_t *, const int64_t *, const int64_t *, int, int64_t, cudaStream_t) [with T=signed short, T_idx=unsigned char]" at line 118 of src/ops/IndexingOps.cu
+
+include/ops/helpers/IndexingKernels.h(27): warning #186-D: pointless comparison of unsigned integer with zero
+      if (gathered_idx < 0 || (int64_t)gathered_idx >= in_dims[dim]) {
+                       ^
+          detected during:
+            instantiation of "void OwnTensor::cuda::gather_kernel(const T *, const T_idx *, T *, int64_t, const int64_t *, const int64_t *, const int64_t *, const int64_t *, int, int64_t) [with T=signed short, T_idx=unsigned short]" at line 69
+            instantiation of "void OwnTensor::cuda::gather_cuda(const T *, const T_idx *, T *, int64_t, const int64_t *, const int64_t *, const int64_t *, const int64_t *, const int64_t *, int, int64_t, cudaStream_t) [with T=signed short, T_idx=unsigned short]" at line 118 of src/ops/IndexingOps.cu
+
+include/ops/helpers/IndexingKernels.h(27): warning #186-D: pointless comparison of unsigned integer with zero
+      if (gathered_idx < 0 || (int64_t)gathered_idx >= in_dims[dim]) {
+                       ^
+          detected during:
+            instantiation of "void OwnTensor::cuda::gather_kernel(const T *, const T_idx *, T *, int64_t, const int64_t *, const int64_t *, const int64_t *, const int64_t *, int, int64_t) [with T=signed short, T_idx=unsigned int]" at line 69
+            instantiation of "void OwnTensor::cuda::gather_cuda(const T *, const T_idx *, T *, int64_t, const int64_t *, const int64_t *, const int64_t *, const int64_t *, const int64_t *, int, int64_t, cudaStream_t) [with T=signed short, T_idx=unsigned int]" at line 118 of src/ops/IndexingOps.cu
+
+include/ops/helpers/IndexingKernels.h(27): warning #186-D: pointless comparison of unsigned integer with zero
+      if (gathered_idx < 0 || (int64_t)gathered_idx >= in_dims[dim]) {
+                       ^
+          detected during:
+            instantiation of "void OwnTensor::cuda::gather_kernel(const T *, const T_idx *, T *, int64_t, const int64_t *, const int64_t *, const int64_t *, const int64_t *, int, int64_t) [with T=signed short, T_idx=unsigned long]" at line 69
+            instantiation of "void OwnTensor::cuda::gather_cuda(const T *, const T_idx *, T *, int64_t, const int64_t *, const int64_t *, const int64_t *, const int64_t *, const int64_t *, int, int64_t, cudaStream_t) [with T=signed short, T_idx=unsigned long]" at line 118 of src/ops/IndexingOps.cu
+
+include/ops/helpers/IndexingKernels.h(27): warning #186-D: pointless comparison of unsigned integer with zero
+      if (gathered_idx < 0 || (int64_t)gathered_idx >= in_dims[dim]) {
+                       ^
+          detected during:
+            instantiation of "void OwnTensor::cuda::gather_kernel(const T *, const T_idx *, T *, int64_t, const int64_t *, const int64_t *, const int64_t *, const int64_t *, int, int64_t) [with T=signed int, T_idx=unsigned char]" at line 69
+            instantiation of "void OwnTensor::cuda::gather_cuda(const T *, const T_idx *, T *, int64_t, const int64_t *, const int64_t *, const int64_t *, const int64_t *, const int64_t *, int, int64_t, cudaStream_t) [with T=signed int, T_idx=unsigned char]" at line 118 of src/ops/IndexingOps.cu
+
+include/ops/helpers/IndexingKernels.h(27): warning #186-D: pointless comparison of unsigned integer with zero
+      if (gathered_idx < 0 || (int64_t)gathered_idx >= in_dims[dim]) {
+                       ^
+          detected during:
+            instantiation of "void OwnTensor::cuda::gather_kernel(const T *, const T_idx *, T *, int64_t, const int64_t *, const int64_t *, const int64_t *, const int64_t *, int, int64_t) [with T=signed int, T_idx=unsigned short]" at line 69
+            instantiation of "void OwnTensor::cuda::gather_cuda(const T *, const T_idx *, T *, int64_t, const int64_t *, const int64_t *, const int64_t *, const int64_t *, const int64_t *, int, int64_t, cudaStream_t) [with T=signed int, T_idx=unsigned short]" at line 118 of src/ops/IndexingOps.cu
+
+include/ops/helpers/IndexingKernels.h(27): warning #186-D: pointless comparison of unsigned integer with zero
+      if (gathered_idx < 0 || (int64_t)gathered_idx >= in_dims[dim]) {
+                       ^
+          detected during:
+            instantiation of "void OwnTensor::cuda::gather_kernel(const T *, const T_idx *, T *, int64_t, const int64_t *, const int64_t *, const int64_t *, const int64_t *, int, int64_t) [with T=signed int, T_idx=unsigned int]" at line 69
+            instantiation of "void OwnTensor::cuda::gather_cuda(const T *, const T_idx *, T *, int64_t, const int64_t *, const int64_t *, const int64_t *, const int64_t *, const int64_t *, int, int64_t, cudaStream_t) [with T=signed int, T_idx=unsigned int]" at line 118 of src/ops/IndexingOps.cu
+
+include/ops/helpers/IndexingKernels.h(27): warning #186-D: pointless comparison of unsigned integer with zero
+      if (gathered_idx < 0 || (int64_t)gathered_idx >= in_dims[dim]) {
+                       ^
+          detected during:
+            instantiation of "void OwnTensor::cuda::gather_kernel(const T *, const T_idx *, T *, int64_t, const int64_t *, const int64_t *, const int64_t *, const int64_t *, int, int64_t) [with T=signed int, T_idx=unsigned long]" at line 69
+            instantiation of "void OwnTensor::cuda::gather_cuda(const T *, const T_idx *, T *, int64_t, const int64_t *, const int64_t *, const int64_t *, const int64_t *, const int64_t *, int, int64_t, cudaStream_t) [with T=signed int, T_idx=unsigned long]" at line 118 of src/ops/IndexingOps.cu
+
+include/ops/helpers/IndexingKernels.h(27): warning #186-D: pointless comparison of unsigned integer with zero
+      if (gathered_idx < 0 || (int64_t)gathered_idx >= in_dims[dim]) {
+                       ^
+          detected during:
+            instantiation of "void OwnTensor::cuda::gather_kernel(const T *, const T_idx *, T *, int64_t, const int64_t *, const int64_t *, const int64_t *, const int64_t *, int, int64_t) [with T=signed long, T_idx=unsigned char]" at line 69
+            instantiation of "void OwnTensor::cuda::gather_cuda(const T *, const T_idx *, T *, int64_t, const int64_t *, const int64_t *, const int64_t *, const int64_t *, const int64_t *, int, int64_t, cudaStream_t) [with T=signed long, T_idx=unsigned char]" at line 118 of src/ops/IndexingOps.cu
+
+include/ops/helpers/IndexingKernels.h(27): warning #186-D: pointless comparison of unsigned integer with zero
+      if (gathered_idx < 0 || (int64_t)gathered_idx >= in_dims[dim]) {
+                       ^
+          detected during:
+            instantiation of "void OwnTensor::cuda::gather_kernel(const T *, const T_idx *, T *, int64_t, const int64_t *, const int64_t *, const int64_t *, const int64_t *, int, int64_t) [with T=signed long, T_idx=unsigned short]" at line 69
+            instantiation of "void OwnTensor::cuda::gather_cuda(const T *, const T_idx *, T *, int64_t, const int64_t *, const int64_t *, const int64_t *, const int64_t *, const int64_t *, int, int64_t, cudaStream_t) [with T=signed long, T_idx=unsigned short]" at line 118 of src/ops/IndexingOps.cu
+
+include/ops/helpers/IndexingKernels.h(27): warning #186-D: pointless comparison of unsigned integer with zero
+      if (gathered_idx < 0 || (int64_t)gathered_idx >= in_dims[dim]) {
+                       ^
+          detected during:
+            instantiation of "void OwnTensor::cuda::gather_kernel(const T *, const T_idx *, T *, int64_t, const int64_t *, const int64_t *, const int64_t *, const int64_t *, int, int64_t) [with T=signed long, T_idx=unsigned int]" at line 69
+            instantiation of "void OwnTensor::cuda::gather_cuda(const T *, const T_idx *, T *, int64_t, const int64_t *, const int64_t *, const int64_t *, const int64_t *, const int64_t *, int, int64_t, cudaStream_t) [with T=signed long, T_idx=unsigned int]" at line 118 of src/ops/IndexingOps.cu
+
+include/ops/helpers/IndexingKernels.h(27): warning #186-D: pointless comparison of unsigned integer with zero
+      if (gathered_idx < 0 || (int64_t)gathered_idx >= in_dims[dim]) {
+                       ^
+          detected during:
+            instantiation of "void OwnTensor::cuda::gather_kernel(const T *, const T_idx *, T *, int64_t, const int64_t *, const int64_t *, const int64_t *, const int64_t *, int, int64_t) [with T=signed long, T_idx=unsigned long]" at line 69
+            instantiation of "void OwnTensor::cuda::gather_cuda(const T *, const T_idx *, T *, int64_t, const int64_t *, const int64_t *, const int64_t *, const int64_t *, const int64_t *, int, int64_t, cudaStream_t) [with T=signed long, T_idx=unsigned long]" at line 118 of src/ops/IndexingOps.cu
+
+include/ops/helpers/IndexingKernels.h(27): warning #186-D: pointless comparison of unsigned integer with zero
+      if (gathered_idx < 0 || (int64_t)gathered_idx >= in_dims[dim]) {
+                       ^
+          detected during:
+            instantiation of "void OwnTensor::cuda::gather_kernel(const T *, const T_idx *, T *, int64_t, const int64_t *, const int64_t *, const int64_t *, const int64_t *, int, int64_t) [with T=float, T_idx=unsigned char]" at line 69
+            instantiation of "void OwnTensor::cuda::gather_cuda(const T *, const T_idx *, T *, int64_t, const int64_t *, const int64_t *, const int64_t *, const int64_t *, const int64_t *, int, int64_t, cudaStream_t) [with T=float, T_idx=unsigned char]" at line 118 of src/ops/IndexingOps.cu
+
+include/ops/helpers/IndexingKernels.h(27): warning #186-D: pointless comparison of unsigned integer with zero
+      if (gathered_idx < 0 || (int64_t)gathered_idx >= in_dims[dim]) {
+                       ^
+          detected during:
+            instantiation of "void OwnTensor::cuda::gather_kernel(const T *, const T_idx *, T *, int64_t, const int64_t *, const int64_t *, const int64_t *, const int64_t *, int, int64_t) [with T=float, T_idx=unsigned short]" at line 69
+            instantiation of "void OwnTensor::cuda::gather_cuda(const T *, const T_idx *, T *, int64_t, const int64_t *, const int64_t *, const int64_t *, const int64_t *, const int64_t *, int, int64_t, cudaStream_t) [with T=float, T_idx=unsigned short]" at line 118 of src/ops/IndexingOps.cu
+
+include/ops/helpers/IndexingKernels.h(27): warning #186-D: pointless comparison of unsigned integer with zero
+      if (gathered_idx < 0 || (int64_t)gathered_idx >= in_dims[dim]) {
+                       ^
+          detected during:
+            instantiation of "void OwnTensor::cuda::gather_kernel(const T *, const T_idx *, T *, int64_t, const int64_t *, const int64_t *, const int64_t *, const int64_t *, int, int64_t) [with T=float, T_idx=unsigned int]" at line 69
+            instantiation of "void OwnTensor::cuda::gather_cuda(const T *, const T_idx *, T *, int64_t, const int64_t *, const int64_t *, const int64_t *, const int64_t *, const int64_t *, int, int64_t, cudaStream_t) [with T=float, T_idx=unsigned int]" at line 118 of src/ops/IndexingOps.cu
+
+include/ops/helpers/IndexingKernels.h(27): warning #186-D: pointless comparison of unsigned integer with zero
+      if (gathered_idx < 0 || (int64_t)gathered_idx >= in_dims[dim]) {
+                       ^
+          detected during:
+            instantiation of "void OwnTensor::cuda::gather_kernel(const T *, const T_idx *, T *, int64_t, const int64_t *, const int64_t *, const int64_t *, const int64_t *, int, int64_t) [with T=float, T_idx=unsigned long]" at line 69
+            instantiation of "void OwnTensor::cuda::gather_cuda(const T *, const T_idx *, T *, int64_t, const int64_t *, const int64_t *, const int64_t *, const int64_t *, const int64_t *, int, int64_t, cudaStream_t) [with T=float, T_idx=unsigned long]" at line 118 of src/ops/IndexingOps.cu
+
+include/ops/helpers/IndexingKernels.h(27): warning #186-D: pointless comparison of unsigned integer with zero
+      if (gathered_idx < 0 || (int64_t)gathered_idx >= in_dims[dim]) {
+                       ^
+          detected during:
+            instantiation of "void OwnTensor::cuda::gather_kernel(const T *, const T_idx *, T *, int64_t, const int64_t *, const int64_t *, const int64_t *, const int64_t *, int, int64_t) [with T=double, T_idx=unsigned char]" at line 69
+            instantiation of "void OwnTensor::cuda::gather_cuda(const T *, const T_idx *, T *, int64_t, const int64_t *, const int64_t *, const int64_t *, const int64_t *, const int64_t *, int, int64_t, cudaStream_t) [with T=double, T_idx=unsigned char]" at line 118 of src/ops/IndexingOps.cu
+
+include/ops/helpers/IndexingKernels.h(27): warning #186-D: pointless comparison of unsigned integer with zero
+      if (gathered_idx < 0 || (int64_t)gathered_idx >= in_dims[dim]) {
+                       ^
+          detected during:
+            instantiation of "void OwnTensor::cuda::gather_kernel(const T *, const T_idx *, T *, int64_t, const int64_t *, const int64_t *, const int64_t *, const int64_t *, int, int64_t) [with T=double, T_idx=unsigned short]" at line 69
+            instantiation of "void OwnTensor::cuda::gather_cuda(const T *, const T_idx *, T *, int64_t, const int64_t *, const int64_t *, const int64_t *, const int64_t *, const int64_t *, int, int64_t, cudaStream_t) [with T=double, T_idx=unsigned short]" at line 118 of src/ops/IndexingOps.cu
+
+include/ops/helpers/IndexingKernels.h(27): warning #186-D: pointless comparison of unsigned integer with zero
+      if (gathered_idx < 0 || (int64_t)gathered_idx >= in_dims[dim]) {
+                       ^
+          detected during:
+            instantiation of "void OwnTensor::cuda::gather_kernel(const T *, const T_idx *, T *, int64_t, const int64_t *, const int64_t *, const int64_t *, const int64_t *, int, int64_t) [with T=double, T_idx=unsigned int]" at line 69
+            instantiation of "void OwnTensor::cuda::gather_cuda(const T *, const T_idx *, T *, int64_t, const int64_t *, const int64_t *, const int64_t *, const int64_t *, const int64_t *, int, int64_t, cudaStream_t) [with T=double, T_idx=unsigned int]" at line 118 of src/ops/IndexingOps.cu
+
+include/ops/helpers/IndexingKernels.h(27): warning #186-D: pointless comparison of unsigned integer with zero
+      if (gathered_idx < 0 || (int64_t)gathered_idx >= in_dims[dim]) {
+                       ^
+          detected during:
+            instantiation of "void OwnTensor::cuda::gather_kernel(const T *, const T_idx *, T *, int64_t, const int64_t *, const int64_t *, const int64_t *, const int64_t *, int, int64_t) [with T=double, T_idx=unsigned long]" at line 69
+            instantiation of "void OwnTensor::cuda::gather_cuda(const T *, const T_idx *, T *, int64_t, const int64_t *, const int64_t *, const int64_t *, const int64_t *, const int64_t *, int, int64_t, cudaStream_t) [with T=double, T_idx=unsigned long]" at line 118 of src/ops/IndexingOps.cu
+
+include/ops/helpers/IndexingKernels.h(27): warning #186-D: pointless comparison of unsigned integer with zero
+      if (gathered_idx < 0 || (int64_t)gathered_idx >= in_dims[dim]) {
+                       ^
+          detected during:
+            instantiation of "void OwnTensor::cuda::gather_kernel(const T *, const T_idx *, T *, int64_t, const int64_t *, const int64_t *, const int64_t *, const int64_t *, int, int64_t) [with T=OwnTensor::bfloat16_t, T_idx=unsigned char]" at line 69
+            instantiation of "void OwnTensor::cuda::gather_cuda(const T *, const T_idx *, T *, int64_t, const int64_t *, const int64_t *, const int64_t *, const int64_t *, const int64_t *, int, int64_t, cudaStream_t) [with T=OwnTensor::bfloat16_t, T_idx=unsigned char]" at line 118 of src/ops/IndexingOps.cu
+
+include/ops/helpers/IndexingKernels.h(27): warning #186-D: pointless comparison of unsigned integer with zero
+      if (gathered_idx < 0 || (int64_t)gathered_idx >= in_dims[dim]) {
+                       ^
+          detected during:
+            instantiation of "void OwnTensor::cuda::gather_kernel(const T *, const T_idx *, T *, int64_t, const int64_t *, const int64_t *, const int64_t *, const int64_t *, int, int64_t) [with T=OwnTensor::bfloat16_t, T_idx=unsigned short]" at line 69
+            instantiation of "void OwnTensor::cuda::gather_cuda(const T *, const T_idx *, T *, int64_t, const int64_t *, const int64_t *, const int64_t *, const int64_t *, const int64_t *, int, int64_t, cudaStream_t) [with T=OwnTensor::bfloat16_t, T_idx=unsigned short]" at line 118 of src/ops/IndexingOps.cu
+
+include/ops/helpers/IndexingKernels.h(27): warning #186-D: pointless comparison of unsigned integer with zero
+      if (gathered_idx < 0 || (int64_t)gathered_idx >= in_dims[dim]) {
+                       ^
+          detected during:
+            instantiation of "void OwnTensor::cuda::gather_kernel(const T *, const T_idx *, T *, int64_t, const int64_t *, const int64_t *, const int64_t *, const int64_t *, int, int64_t) [with T=OwnTensor::bfloat16_t, T_idx=unsigned int]" at line 69
+            instantiation of "void OwnTensor::cuda::gather_cuda(const T *, const T_idx *, T *, int64_t, const int64_t *, const int64_t *, const int64_t *, const int64_t *, const int64_t *, int, int64_t, cudaStream_t) [with T=OwnTensor::bfloat16_t, T_idx=unsigned int]" at line 118 of src/ops/IndexingOps.cu
+
+include/ops/helpers/IndexingKernels.h(27): warning #186-D: pointless comparison of unsigned integer with zero
+      if (gathered_idx < 0 || (int64_t)gathered_idx >= in_dims[dim]) {
+                       ^
+          detected during:
+            instantiation of "void OwnTensor::cuda::gather_kernel(const T *, const T_idx *, T *, int64_t, const int64_t *, const int64_t *, const int64_t *, const int64_t *, int, int64_t) [with T=OwnTensor::bfloat16_t, T_idx=unsigned long]" at line 69
+            instantiation of "void OwnTensor::cuda::gather_cuda(const T *, const T_idx *, T *, int64_t, const int64_t *, const int64_t *, const int64_t *, const int64_t *, const int64_t *, int, int64_t, cudaStream_t) [with T=OwnTensor::bfloat16_t, T_idx=unsigned long]" at line 118 of src/ops/IndexingOps.cu
+
+include/ops/helpers/IndexingKernels.h(27): warning #186-D: pointless comparison of unsigned integer with zero
+      if (gathered_idx < 0 || (int64_t)gathered_idx >= in_dims[dim]) {
+                       ^
+          detected during:
+            instantiation of "void OwnTensor::cuda::gather_kernel(const T *, const T_idx *, T *, int64_t, const int64_t *, const int64_t *, const int64_t *, const int64_t *, int, int64_t) [with T=OwnTensor::float16_t, T_idx=unsigned char]" at line 69
+            instantiation of "void OwnTensor::cuda::gather_cuda(const T *, const T_idx *, T *, int64_t, const int64_t *, const int64_t *, const int64_t *, const int64_t *, const int64_t *, int, int64_t, cudaStream_t) [with T=OwnTensor::float16_t, T_idx=unsigned char]" at line 118 of src/ops/IndexingOps.cu
+
+include/ops/helpers/IndexingKernels.h(27): warning #186-D: pointless comparison of unsigned integer with zero
+      if (gathered_idx < 0 || (int64_t)gathered_idx >= in_dims[dim]) {
+                       ^
+          detected during:
+            instantiation of "void OwnTensor::cuda::gather_kernel(const T *, const T_idx *, T *, int64_t, const int64_t *, const int64_t *, const int64_t *, const int64_t *, int, int64_t) [with T=OwnTensor::float16_t, T_idx=unsigned short]" at line 69
+            instantiation of "void OwnTensor::cuda::gather_cuda(const T *, const T_idx *, T *, int64_t, const int64_t *, const int64_t *, const int64_t *, const int64_t *, const int64_t *, int, int64_t, cudaStream_t) [with T=OwnTensor::float16_t, T_idx=unsigned short]" at line 118 of src/ops/IndexingOps.cu
+
+include/ops/helpers/IndexingKernels.h(27): warning #186-D: pointless comparison of unsigned integer with zero
+      if (gathered_idx < 0 || (int64_t)gathered_idx >= in_dims[dim]) {
+                       ^
+          detected during:
+            instantiation of "void OwnTensor::cuda::gather_kernel(const T *, const T_idx *, T *, int64_t, const int64_t *, const int64_t *, const int64_t *, const int64_t *, int, int64_t) [with T=OwnTensor::float16_t, T_idx=unsigned int]" at line 69
+            instantiation of "void OwnTensor::cuda::gather_cuda(const T *, const T_idx *, T *, int64_t, const int64_t *, const int64_t *, const int64_t *, const int64_t *, const int64_t *, int, int64_t, cudaStream_t) [with T=OwnTensor::float16_t, T_idx=unsigned int]" at line 118 of src/ops/IndexingOps.cu
+
+include/ops/helpers/IndexingKernels.h(27): warning #186-D: pointless comparison of unsigned integer with zero
+      if (gathered_idx < 0 || (int64_t)gathered_idx >= in_dims[dim]) {
+                       ^
+          detected during:
+            instantiation of "void OwnTensor::cuda::gather_kernel(const T *, const T_idx *, T *, int64_t, const int64_t *, const int64_t *, const int64_t *, const int64_t *, int, int64_t) [with T=OwnTensor::float16_t, T_idx=unsigned long]" at line 69
+            instantiation of "void OwnTensor::cuda::gather_cuda(const T *, const T_idx *, T *, int64_t, const int64_t *, const int64_t *, const int64_t *, const int64_t *, const int64_t *, int, int64_t, cudaStream_t) [with T=OwnTensor::float16_t, T_idx=unsigned long]" at line 118 of src/ops/IndexingOps.cu
+
+include/ops/helpers/IndexingKernels.h(27): warning #186-D: pointless comparison of unsigned integer with zero
+      if (gathered_idx < 0 || (int64_t)gathered_idx >= in_dims[dim]) {
+                       ^
+          detected during:
+            instantiation of "void OwnTensor::cuda::gather_kernel(const T *, const T_idx *, T *, int64_t, const int64_t *, const int64_t *, const int64_t *, const int64_t *, int, int64_t) [with T=__nv_bool, T_idx=unsigned char]" at line 69
+            instantiation of "void OwnTensor::cuda::gather_cuda(const T *, const T_idx *, T *, int64_t, const int64_t *, const int64_t *, const int64_t *, const int64_t *, const int64_t *, int, int64_t, cudaStream_t) [with T=__nv_bool, T_idx=unsigned char]" at line 118 of src/ops/IndexingOps.cu
+
+include/ops/helpers/IndexingKernels.h(27): warning #186-D: pointless comparison of unsigned integer with zero
+      if (gathered_idx < 0 || (int64_t)gathered_idx >= in_dims[dim]) {
+                       ^
+          detected during:
+            instantiation of "void OwnTensor::cuda::gather_kernel(const T *, const T_idx *, T *, int64_t, const int64_t *, const int64_t *, const int64_t *, const int64_t *, int, int64_t) [with T=__nv_bool, T_idx=unsigned short]" at line 69
+            instantiation of "void OwnTensor::cuda::gather_cuda(const T *, const T_idx *, T *, int64_t, const int64_t *, const int64_t *, const int64_t *, const int64_t *, const int64_t *, int, int64_t, cudaStream_t) [with T=__nv_bool, T_idx=unsigned short]" at line 118 of src/ops/IndexingOps.cu
+
+include/ops/helpers/IndexingKernels.h(27): warning #186-D: pointless comparison of unsigned integer with zero
+      if (gathered_idx < 0 || (int64_t)gathered_idx >= in_dims[dim]) {
+                       ^
+          detected during:
+            instantiation of "void OwnTensor::cuda::gather_kernel(const T *, const T_idx *, T *, int64_t, const int64_t *, const int64_t *, const int64_t *, const int64_t *, int, int64_t) [with T=__nv_bool, T_idx=unsigned int]" at line 69
+            instantiation of "void OwnTensor::cuda::gather_cuda(const T *, const T_idx *, T *, int64_t, const int64_t *, const int64_t *, const int64_t *, const int64_t *, const int64_t *, int, int64_t, cudaStream_t) [with T=__nv_bool, T_idx=unsigned int]" at line 118 of src/ops/IndexingOps.cu
+
+include/ops/helpers/IndexingKernels.h(27): warning #186-D: pointless comparison of unsigned integer with zero
+      if (gathered_idx < 0 || (int64_t)gathered_idx >= in_dims[dim]) {
+                       ^
+          detected during:
+            instantiation of "void OwnTensor::cuda::gather_kernel(const T *, const T_idx *, T *, int64_t, const int64_t *, const int64_t *, const int64_t *, const int64_t *, int, int64_t) [with T=__nv_bool, T_idx=unsigned long]" at line 69
+            instantiation of "void OwnTensor::cuda::gather_cuda(const T *, const T_idx *, T *, int64_t, const int64_t *, const int64_t *, const int64_t *, const int64_t *, const int64_t *, int, int64_t, cudaStream_t) [with T=__nv_bool, T_idx=unsigned long]" at line 118 of src/ops/IndexingOps.cu
+
+include/ops/helpers/IndexingKernels.h(27): warning #186-D: pointless comparison of unsigned integer with zero
+      if (gathered_idx < 0 || (int64_t)gathered_idx >= in_dims[dim]) {
+                       ^
+          detected during:
+            instantiation of "void OwnTensor::cuda::gather_kernel(const T *, const T_idx *, T *, int64_t, const int64_t *, const int64_t *, const int64_t *, const int64_t *, int, int64_t) [with T=unsigned char, T_idx=unsigned char]" at line 69
+            instantiation of "void OwnTensor::cuda::gather_cuda(const T *, const T_idx *, T *, int64_t, const int64_t *, const int64_t *, const int64_t *, const int64_t *, const int64_t *, int, int64_t, cudaStream_t) [with T=unsigned char, T_idx=unsigned char]" at line 118 of src/ops/IndexingOps.cu
+
+include/ops/helpers/IndexingKernels.h(27): warning #186-D: pointless comparison of unsigned integer with zero
+      if (gathered_idx < 0 || (int64_t)gathered_idx >= in_dims[dim]) {
+                       ^
+          detected during:
+            instantiation of "void OwnTensor::cuda::gather_kernel(const T *, const T_idx *, T *, int64_t, const int64_t *, const int64_t *, const int64_t *, const int64_t *, int, int64_t) [with T=unsigned char, T_idx=unsigned short]" at line 69
+            instantiation of "void OwnTensor::cuda::gather_cuda(const T *, const T_idx *, T *, int64_t, const int64_t *, const int64_t *, const int64_t *, const int64_t *, const int64_t *, int, int64_t, cudaStream_t) [with T=unsigned char, T_idx=unsigned short]" at line 118 of src/ops/IndexingOps.cu
+
+include/ops/helpers/IndexingKernels.h(27): warning #186-D: pointless comparison of unsigned integer with zero
+      if (gathered_idx < 0 || (int64_t)gathered_idx >= in_dims[dim]) {
+                       ^
+          detected during:
+            instantiation of "void OwnTensor::cuda::gather_kernel(const T *, const T_idx *, T *, int64_t, const int64_t *, const int64_t *, const int64_t *, const int64_t *, int, int64_t) [with T=unsigned char, T_idx=unsigned int]" at line 69
+            instantiation of "void OwnTensor::cuda::gather_cuda(const T *, const T_idx *, T *, int64_t, const int64_t *, const int64_t *, const int64_t *, const int64_t *, const int64_t *, int, int64_t, cudaStream_t) [with T=unsigned char, T_idx=unsigned int]" at line 118 of src/ops/IndexingOps.cu
+
+include/ops/helpers/IndexingKernels.h(27): warning #186-D: pointless comparison of unsigned integer with zero
+      if (gathered_idx < 0 || (int64_t)gathered_idx >= in_dims[dim]) {
+                       ^
+          detected during:
+            instantiation of "void OwnTensor::cuda::gather_kernel(const T *, const T_idx *, T *, int64_t, const int64_t *, const int64_t *, const int64_t *, const int64_t *, int, int64_t) [with T=unsigned char, T_idx=unsigned long]" at line 69
+            instantiation of "void OwnTensor::cuda::gather_cuda(const T *, const T_idx *, T *, int64_t, const int64_t *, const int64_t *, const int64_t *, const int64_t *, const int64_t *, int, int64_t, cudaStream_t) [with T=unsigned char, T_idx=unsigned long]" at line 118 of src/ops/IndexingOps.cu
+
+include/ops/helpers/IndexingKernels.h(27): warning #186-D: pointless comparison of unsigned integer with zero
+      if (gathered_idx < 0 || (int64_t)gathered_idx >= in_dims[dim]) {
+                       ^
+          detected during:
+            instantiation of "void OwnTensor::cuda::gather_kernel(const T *, const T_idx *, T *, int64_t, const int64_t *, const int64_t *, const int64_t *, const int64_t *, int, int64_t) [with T=unsigned short, T_idx=unsigned char]" at line 69
+            instantiation of "void OwnTensor::cuda::gather_cuda(const T *, const T_idx *, T *, int64_t, const int64_t *, const int64_t *, const int64_t *, const int64_t *, const int64_t *, int, int64_t, cudaStream_t) [with T=unsigned short, T_idx=unsigned char]" at line 118 of src/ops/IndexingOps.cu
+
+include/ops/helpers/IndexingKernels.h(27): warning #186-D: pointless comparison of unsigned integer with zero
+      if (gathered_idx < 0 || (int64_t)gathered_idx >= in_dims[dim]) {
+                       ^
+          detected during:
+            instantiation of "void OwnTensor::cuda::gather_kernel(const T *, const T_idx *, T *, int64_t, const int64_t *, const int64_t *, const int64_t *, const int64_t *, int, int64_t) [with T=unsigned short, T_idx=unsigned short]" at line 69
+            instantiation of "void OwnTensor::cuda::gather_cuda(const T *, const T_idx *, T *, int64_t, const int64_t *, const int64_t *, const int64_t *, const int64_t *, const int64_t *, int, int64_t, cudaStream_t) [with T=unsigned short, T_idx=unsigned short]" at line 118 of src/ops/IndexingOps.cu
+
+include/ops/helpers/IndexingKernels.h(27): warning #186-D: pointless comparison of unsigned integer with zero
+      if (gathered_idx < 0 || (int64_t)gathered_idx >= in_dims[dim]) {
+                       ^
+          detected during:
+            instantiation of "void OwnTensor::cuda::gather_kernel(const T *, const T_idx *, T *, int64_t, const int64_t *, const int64_t *, const int64_t *, const int64_t *, int, int64_t) [with T=unsigned short, T_idx=unsigned int]" at line 69
+            instantiation of "void OwnTensor::cuda::gather_cuda(const T *, const T_idx *, T *, int64_t, const int64_t *, const int64_t *, const int64_t *, const int64_t *, const int64_t *, int, int64_t, cudaStream_t) [with T=unsigned short, T_idx=unsigned int]" at line 118 of src/ops/IndexingOps.cu
+
+include/ops/helpers/IndexingKernels.h(27): warning #186-D: pointless comparison of unsigned integer with zero
+      if (gathered_idx < 0 || (int64_t)gathered_idx >= in_dims[dim]) {
+                       ^
+          detected during:
+            instantiation of "void OwnTensor::cuda::gather_kernel(const T *, const T_idx *, T *, int64_t, const int64_t *, const int64_t *, const int64_t *, const int64_t *, int, int64_t) [with T=unsigned short, T_idx=unsigned long]" at line 69
+            instantiation of "void OwnTensor::cuda::gather_cuda(const T *, const T_idx *, T *, int64_t, const int64_t *, const int64_t *, const int64_t *, const int64_t *, const int64_t *, int, int64_t, cudaStream_t) [with T=unsigned short, T_idx=unsigned long]" at line 118 of src/ops/IndexingOps.cu
+
+include/ops/helpers/IndexingKernels.h(27): warning #186-D: pointless comparison of unsigned integer with zero
+      if (gathered_idx < 0 || (int64_t)gathered_idx >= in_dims[dim]) {
+                       ^
+          detected during:
+            instantiation of "void OwnTensor::cuda::gather_kernel(const T *, const T_idx *, T *, int64_t, const int64_t *, const int64_t *, const int64_t *, const int64_t *, int, int64_t) [with T=unsigned int, T_idx=unsigned char]" at line 69
+            instantiation of "void OwnTensor::cuda::gather_cuda(const T *, const T_idx *, T *, int64_t, const int64_t *, const int64_t *, const int64_t *, const int64_t *, const int64_t *, int, int64_t, cudaStream_t) [with T=unsigned int, T_idx=unsigned char]" at line 118 of src/ops/IndexingOps.cu
+
+include/ops/helpers/IndexingKernels.h(27): warning #186-D: pointless comparison of unsigned integer with zero
+      if (gathered_idx < 0 || (int64_t)gathered_idx >= in_dims[dim]) {
+                       ^
+          detected during:
+            instantiation of "void OwnTensor::cuda::gather_kernel(const T *, const T_idx *, T *, int64_t, const int64_t *, const int64_t *, const int64_t *, const int64_t *, int, int64_t) [with T=unsigned int, T_idx=unsigned short]" at line 69
+            instantiation of "void OwnTensor::cuda::gather_cuda(const T *, const T_idx *, T *, int64_t, const int64_t *, const int64_t *, const int64_t *, const int64_t *, const int64_t *, int, int64_t, cudaStream_t) [with T=unsigned int, T_idx=unsigned short]" at line 118 of src/ops/IndexingOps.cu
+
+include/ops/helpers/IndexingKernels.h(27): warning #186-D: pointless comparison of unsigned integer with zero
+      if (gathered_idx < 0 || (int64_t)gathered_idx >= in_dims[dim]) {
+                       ^
+          detected during:
+            instantiation of "void OwnTensor::cuda::gather_kernel(const T *, const T_idx *, T *, int64_t, const int64_t *, const int64_t *, const int64_t *, const int64_t *, int, int64_t) [with T=unsigned int, T_idx=unsigned int]" at line 69
+            instantiation of "void OwnTensor::cuda::gather_cuda(const T *, const T_idx *, T *, int64_t, const int64_t *, const int64_t *, const int64_t *, const int64_t *, const int64_t *, int, int64_t, cudaStream_t) [with T=unsigned int, T_idx=unsigned int]" at line 118 of src/ops/IndexingOps.cu
+
+include/ops/helpers/IndexingKernels.h(27): warning #186-D: pointless comparison of unsigned integer with zero
+      if (gathered_idx < 0 || (int64_t)gathered_idx >= in_dims[dim]) {
+                       ^
+          detected during:
+            instantiation of "void OwnTensor::cuda::gather_kernel(const T *, const T_idx *, T *, int64_t, const int64_t *, const int64_t *, const int64_t *, const int64_t *, int, int64_t) [with T=unsigned int, T_idx=unsigned long]" at line 69
+            instantiation of "void OwnTensor::cuda::gather_cuda(const T *, const T_idx *, T *, int64_t, const int64_t *, const int64_t *, const int64_t *, const int64_t *, const int64_t *, int, int64_t, cudaStream_t) [with T=unsigned int, T_idx=unsigned long]" at line 118 of src/ops/IndexingOps.cu
+
+include/ops/helpers/IndexingKernels.h(27): warning #186-D: pointless comparison of unsigned integer with zero
+      if (gathered_idx < 0 || (int64_t)gathered_idx >= in_dims[dim]) {
+                       ^
+          detected during:
+            instantiation of "void OwnTensor::cuda::gather_kernel(const T *, const T_idx *, T *, int64_t, const int64_t *, const int64_t *, const int64_t *, const int64_t *, int, int64_t) [with T=unsigned long, T_idx=unsigned char]" at line 69
+            instantiation of "void OwnTensor::cuda::gather_cuda(const T *, const T_idx *, T *, int64_t, const int64_t *, const int64_t *, const int64_t *, const int64_t *, const int64_t *, int, int64_t, cudaStream_t) [with T=unsigned long, T_idx=unsigned char]" at line 118 of src/ops/IndexingOps.cu
+
+include/ops/helpers/IndexingKernels.h(27): warning #186-D: pointless comparison of unsigned integer with zero
+      if (gathered_idx < 0 || (int64_t)gathered_idx >= in_dims[dim]) {
+                       ^
+          detected during:
+            instantiation of "void OwnTensor::cuda::gather_kernel(const T *, const T_idx *, T *, int64_t, const int64_t *, const int64_t *, const int64_t *, const int64_t *, int, int64_t) [with T=unsigned long, T_idx=unsigned short]" at line 69
+            instantiation of "void OwnTensor::cuda::gather_cuda(const T *, const T_idx *, T *, int64_t, const int64_t *, const int64_t *, const int64_t *, const int64_t *, const int64_t *, int, int64_t, cudaStream_t) [with T=unsigned long, T_idx=unsigned short]" at line 118 of src/ops/IndexingOps.cu
+
+include/ops/helpers/IndexingKernels.h(27): warning #186-D: pointless comparison of unsigned integer with zero
+      if (gathered_idx < 0 || (int64_t)gathered_idx >= in_dims[dim]) {
+                       ^
+          detected during:
+            instantiation of "void OwnTensor::cuda::gather_kernel(const T *, const T_idx *, T *, int64_t, const int64_t *, const int64_t *, const int64_t *, const int64_t *, int, int64_t) [with T=unsigned long, T_idx=unsigned int]" at line 69
+            instantiation of "void OwnTensor::cuda::gather_cuda(const T *, const T_idx *, T *, int64_t, const int64_t *, const int64_t *, const int64_t *, const int64_t *, const int64_t *, int, int64_t, cudaStream_t) [with T=unsigned long, T_idx=unsigned int]" at line 118 of src/ops/IndexingOps.cu
+
+include/ops/helpers/IndexingKernels.h(27): warning #186-D: pointless comparison of unsigned integer with zero
+      if (gathered_idx < 0 || (int64_t)gathered_idx >= in_dims[dim]) {
+                       ^
+          detected during:
+            instantiation of "void OwnTensor::cuda::gather_kernel(const T *, const T_idx *, T *, int64_t, const int64_t *, const int64_t *, const int64_t *, const int64_t *, int, int64_t) [with T=unsigned long, T_idx=unsigned long]" at line 69
+            instantiation of "void OwnTensor::cuda::gather_cuda(const T *, const T_idx *, T *, int64_t, const int64_t *, const int64_t *, const int64_t *, const int64_t *, const int64_t *, int, int64_t, cudaStream_t) [with T=unsigned long, T_idx=unsigned long]" at line 118 of src/ops/IndexingOps.cu
+
+include/ops/helpers/IndexingKernels.h(27): warning #186-D: pointless comparison of unsigned integer with zero
+      if (gathered_idx < 0 || (int64_t)gathered_idx >= in_dims[dim]) {
+                       ^
+          detected during:
+            instantiation of "void OwnTensor::cuda::gather_kernel(const T *, const T_idx *, T *, int64_t, const int64_t *, const int64_t *, const int64_t *, const int64_t *, int, int64_t) [with T=OwnTensor::complex32_t, T_idx=unsigned char]" at line 69
+            instantiation of "void OwnTensor::cuda::gather_cuda(const T *, const T_idx *, T *, int64_t, const int64_t *, const int64_t *, const int64_t *, const int64_t *, const int64_t *, int, int64_t, cudaStream_t) [with T=OwnTensor::complex32_t, T_idx=unsigned char]" at line 118 of src/ops/IndexingOps.cu
+
+include/ops/helpers/IndexingKernels.h(27): warning #186-D: pointless comparison of unsigned integer with zero
+      if (gathered_idx < 0 || (int64_t)gathered_idx >= in_dims[dim]) {
+                       ^
+          detected during:
+            instantiation of "void OwnTensor::cuda::gather_kernel(const T *, const T_idx *, T *, int64_t, const int64_t *, const int64_t *, const int64_t *, const int64_t *, int, int64_t) [with T=OwnTensor::complex32_t, T_idx=unsigned short]" at line 69
+            instantiation of "void OwnTensor::cuda::gather_cuda(const T *, const T_idx *, T *, int64_t, const int64_t *, const int64_t *, const int64_t *, const int64_t *, const int64_t *, int, int64_t, cudaStream_t) [with T=OwnTensor::complex32_t, T_idx=unsigned short]" at line 118 of src/ops/IndexingOps.cu
+
+include/ops/helpers/IndexingKernels.h(27): warning #186-D: pointless comparison of unsigned integer with zero
+      if (gathered_idx < 0 || (int64_t)gathered_idx >= in_dims[dim]) {
+                       ^
+          detected during:
+            instantiation of "void OwnTensor::cuda::gather_kernel(const T *, const T_idx *, T *, int64_t, const int64_t *, const int64_t *, const int64_t *, const int64_t *, int, int64_t) [with T=OwnTensor::complex32_t, T_idx=unsigned int]" at line 69
+            instantiation of "void OwnTensor::cuda::gather_cuda(const T *, const T_idx *, T *, int64_t, const int64_t *, const int64_t *, const int64_t *, const int64_t *, const int64_t *, int, int64_t, cudaStream_t) [with T=OwnTensor::complex32_t, T_idx=unsigned int]" at line 118 of src/ops/IndexingOps.cu
+
+include/ops/helpers/IndexingKernels.h(27): warning #186-D: pointless comparison of unsigned integer with zero
+      if (gathered_idx < 0 || (int64_t)gathered_idx >= in_dims[dim]) {
+                       ^
+          detected during:
+            instantiation of "void OwnTensor::cuda::gather_kernel(const T *, const T_idx *, T *, int64_t, const int64_t *, const int64_t *, const int64_t *, const int64_t *, int, int64_t) [with T=OwnTensor::complex32_t, T_idx=unsigned long]" at line 69
+            instantiation of "void OwnTensor::cuda::gather_cuda(const T *, const T_idx *, T *, int64_t, const int64_t *, const int64_t *, const int64_t *, const int64_t *, const int64_t *, int, int64_t, cudaStream_t) [with T=OwnTensor::complex32_t, T_idx=unsigned long]" at line 118 of src/ops/IndexingOps.cu
+
+include/ops/helpers/IndexingKernels.h(27): warning #186-D: pointless comparison of unsigned integer with zero
+      if (gathered_idx < 0 || (int64_t)gathered_idx >= in_dims[dim]) {
+                       ^
+          detected during:
+            instantiation of "void OwnTensor::cuda::gather_kernel(const T *, const T_idx *, T *, int64_t, const int64_t *, const int64_t *, const int64_t *, const int64_t *, int, int64_t) [with T=OwnTensor::complex64_t, T_idx=unsigned char]" at line 69
+            instantiation of "void OwnTensor::cuda::gather_cuda(const T *, const T_idx *, T *, int64_t, const int64_t *, const int64_t *, const int64_t *, const int64_t *, const int64_t *, int, int64_t, cudaStream_t) [with T=OwnTensor::complex64_t, T_idx=unsigned char]" at line 118 of src/ops/IndexingOps.cu
+
+include/ops/helpers/IndexingKernels.h(27): warning #186-D: pointless comparison of unsigned integer with zero
+      if (gathered_idx < 0 || (int64_t)gathered_idx >= in_dims[dim]) {
+                       ^
+          detected during:
+            instantiation of "void OwnTensor::cuda::gather_kernel(const T *, const T_idx *, T *, int64_t, const int64_t *, const int64_t *, const int64_t *, const int64_t *, int, int64_t) [with T=OwnTensor::complex64_t, T_idx=unsigned short]" at line 69
+            instantiation of "void OwnTensor::cuda::gather_cuda(const T *, const T_idx *, T *, int64_t, const int64_t *, const int64_t *, const int64_t *, const int64_t *, const int64_t *, int, int64_t, cudaStream_t) [with T=OwnTensor::complex64_t, T_idx=unsigned short]" at line 118 of src/ops/IndexingOps.cu
+
+include/ops/helpers/IndexingKernels.h(27): warning #186-D: pointless comparison of unsigned integer with zero
+      if (gathered_idx < 0 || (int64_t)gathered_idx >= in_dims[dim]) {
+                       ^
+          detected during:
+            instantiation of "void OwnTensor::cuda::gather_kernel(const T *, const T_idx *, T *, int64_t, const int64_t *, const int64_t *, const int64_t *, const int64_t *, int, int64_t) [with T=OwnTensor::complex64_t, T_idx=unsigned int]" at line 69
+            instantiation of "void OwnTensor::cuda::gather_cuda(const T *, const T_idx *, T *, int64_t, const int64_t *, const int64_t *, const int64_t *, const int64_t *, const int64_t *, int, int64_t, cudaStream_t) [with T=OwnTensor::complex64_t, T_idx=unsigned int]" at line 118 of src/ops/IndexingOps.cu
+
+include/ops/helpers/IndexingKernels.h(27): warning #186-D: pointless comparison of unsigned integer with zero
+      if (gathered_idx < 0 || (int64_t)gathered_idx >= in_dims[dim]) {
+                       ^
+          detected during:
+            instantiation of "void OwnTensor::cuda::gather_kernel(const T *, const T_idx *, T *, int64_t, const int64_t *, const int64_t *, const int64_t *, const int64_t *, int, int64_t) [with T=OwnTensor::complex64_t, T_idx=unsigned long]" at line 69
+            instantiation of "void OwnTensor::cuda::gather_cuda(const T *, const T_idx *, T *, int64_t, const int64_t *, const int64_t *, const int64_t *, const int64_t *, const int64_t *, int, int64_t, cudaStream_t) [with T=OwnTensor::complex64_t, T_idx=unsigned long]" at line 118 of src/ops/IndexingOps.cu
+
+include/ops/helpers/IndexingKernels.h(27): warning #186-D: pointless comparison of unsigned integer with zero
+      if (gathered_idx < 0 || (int64_t)gathered_idx >= in_dims[dim]) {
+                       ^
+          detected during:
+            instantiation of "void OwnTensor::cuda::gather_kernel(const T *, const T_idx *, T *, int64_t, const int64_t *, const int64_t *, const int64_t *, const int64_t *, int, int64_t) [with T=OwnTensor::complex128_t, T_idx=unsigned char]" at line 69
+            instantiation of "void OwnTensor::cuda::gather_cuda(const T *, const T_idx *, T *, int64_t, const int64_t *, const int64_t *, const int64_t *, const int64_t *, const int64_t *, int, int64_t, cudaStream_t) [with T=OwnTensor::complex128_t, T_idx=unsigned char]" at line 118 of src/ops/IndexingOps.cu
+
+include/ops/helpers/IndexingKernels.h(27): warning #186-D: pointless comparison of unsigned integer with zero
+      if (gathered_idx < 0 || (int64_t)gathered_idx >= in_dims[dim]) {
+                       ^
+          detected during:
+            instantiation of "void OwnTensor::cuda::gather_kernel(const T *, const T_idx *, T *, int64_t, const int64_t *, const int64_t *, const int64_t *, const int64_t *, int, int64_t) [with T=OwnTensor::complex128_t, T_idx=unsigned short]" at line 69
+            instantiation of "void OwnTensor::cuda::gather_cuda(const T *, const T_idx *, T *, int64_t, const int64_t *, const int64_t *, const int64_t *, const int64_t *, const int64_t *, int, int64_t, cudaStream_t) [with T=OwnTensor::complex128_t, T_idx=unsigned short]" at line 118 of src/ops/IndexingOps.cu
+
+include/ops/helpers/IndexingKernels.h(27): warning #186-D: pointless comparison of unsigned integer with zero
+      if (gathered_idx < 0 || (int64_t)gathered_idx >= in_dims[dim]) {
+                       ^
+          detected during:
+            instantiation of "void OwnTensor::cuda::gather_kernel(const T *, const T_idx *, T *, int64_t, const int64_t *, const int64_t *, const int64_t *, const int64_t *, int, int64_t) [with T=OwnTensor::complex128_t, T_idx=unsigned int]" at line 69
+            instantiation of "void OwnTensor::cuda::gather_cuda(const T *, const T_idx *, T *, int64_t, const int64_t *, const int64_t *, const int64_t *, const int64_t *, const int64_t *, int, int64_t, cudaStream_t) [with T=OwnTensor::complex128_t, T_idx=unsigned int]" at line 118 of src/ops/IndexingOps.cu
+
+include/ops/helpers/IndexingKernels.h(27): warning #186-D: pointless comparison of unsigned integer with zero
+      if (gathered_idx < 0 || (int64_t)gathered_idx >= in_dims[dim]) {
+                       ^
+          detected during:
+            instantiation of "void OwnTensor::cuda::gather_kernel(const T *, const T_idx *, T *, int64_t, const int64_t *, const int64_t *, const int64_t *, const int64_t *, int, int64_t) [with T=OwnTensor::complex128_t, T_idx=unsigned long]" at line 69
+            instantiation of "void OwnTensor::cuda::gather_cuda(const T *, const T_idx *, T *, int64_t, const int64_t *, const int64_t *, const int64_t *, const int64_t *, const int64_t *, int, int64_t, cudaStream_t) [with T=OwnTensor::complex128_t, T_idx=unsigned long]" at line 118 of src/ops/IndexingOps.cu
+

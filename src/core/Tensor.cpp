@@ -46,7 +46,12 @@ namespace OwnTensor
             if (!device::cuda_available()) {
                 throw std::runtime_error("CUDA is not available but CUDA device requested");
             }
+            int old_device = -1;
+            cudaGetDevice(&old_device);
             cudaError_t err = cudaSetDevice(device.index);
+            int new_device = -1;
+            cudaGetDevice(&new_device);
+            // std::cout << "[DEBUG] Tensor: Rank " << device.index << " changed device from " << old_device << " to " << new_device << std::endl;
             if (err != cudaSuccess) {
                 throw std::runtime_error(std::string("Failed to set CUDA device: ") + cudaGetErrorString(err));
             }
