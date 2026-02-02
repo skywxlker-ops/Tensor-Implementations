@@ -1,7 +1,11 @@
+// Branch - Optimized
+
 #include "core/Tensor.h"
 #include "core/TensorDispatch.h"
 #include "device/DeviceTransfer.h"
 #include "core/Views/ViewUtils.h"
+#include "autograd/backward/ShardingBackward.h"
+#include "autograd/ops_template.h"
 #include <numeric>
 #include <iostream>
 
@@ -43,6 +47,53 @@ namespace OwnTensor
         return new_tensor;
     }
 
+    Tensor Tensor::slice_inplace(size_t start, size_t length)
+    {
+        TensorOptions opts = this->opts();
+
+
+        if (start >= this->numel() || start + length > this->numel())
+        {
+            throw std::runtime_error("Range exceeded!! (Zero based indexing)");
+        }
+
+        // Use the BASE pointer - storage_offset will handle the element offset
+        uint8_t* raw_ptr = this->impl_->mutable_storage().data_ptr();
+        DataPtr alias_ptr(raw_ptr, DataPtrDeleter(nullptr));
+        
+        /** 
+         * THIS DOES NOT UPDATE THE REF COUNT AS WE ARE WASTING A IMPL BY CHANGING ITS POINTER
+         * 
+         * Tensor new_tensor = Tensor({ {1, static_cast<int64_t>(length)} }, opts);
+         * new_tensor.unsafeGetTensorImpl()->mutable_storage().set_data_ptr(std::move(alias_ptr));
+         *  this->unsafeGetTensorImpl()->add_ref();
+         * return new_tensor; 
+        */
+
+        intrusive_ptr<Storage> alias_storage = make_intrusive<Storage>(
+            std::move(alias_ptr),
+            this->impl_->storage().nbytes(),
+            this->dtype(),
+            this->device(),
+            nullptr
+        );
+
+        Shape new_shape = {{ 1, int64_t(length)}};
+        int64_t offset = int64_t(start);  // Element offset handled by TensorImpl
+
+        intrusive_ptr<TensorImpl> view_impl = make_intrusive<TensorImpl>(
+            alias_storage,
+            new_shape,
+            ViewUtils::compute_strides(new_shape),
+            offset,
+            this->dtype(),
+            this->device(),
+            intrusive_ptr<TensorImpl>(this->unsafeGetTensorImpl())
+        );
+
+        return Tensor(std::move(view_impl));
+    }
+
     Tensor Tensor::flatten_concat(std::vector<Tensor>& tensor_list)
     {
         if (tensor_list.empty()) {
@@ -58,7 +109,7 @@ namespace OwnTensor
         void* result_ptr = result.data();
         int64_t running_pointer = 0;
 
-        for (const auto& tensor : tensor_list)
+        for (const Tensor& tensor : tensor_list)
         {
             dispatch_by_dtype(tensor.dtype(), [&](auto dummy) {
                     using T = decltype(dummy);
@@ -123,15 +174,16 @@ namespace OwnTensor
         return result;
     }
 
-    Tensor Tensor::narrow_view(int64_t axis, int64_t start, int64_t length) {
+    Tensor Tensor::narrow_view(int64_t axis, int64_t start, int64_t length)
+    {
         Shape old_shape = this->shape();
 
         if (axis < 0 || axis >= old_shape.dims.size())
             throw std::out_of_range("Axis out of bounds");
-        
+
         if (start + length > old_shape.dims[axis])
             throw std::out_of_range("Narrow range exceeds dimension");
-        
+
         Shape new_shape = old_shape;
         new_shape.dims[axis] = length;
 
@@ -163,8 +215,9 @@ namespace OwnTensor
         return Tensor(std::move(view_impl));
     }
 
-        
-    std::vector<Tensor> Tensor::make_shards(size_t num_shards, int64_t axis) { 
+
+    std::vector<Tensor> Tensor::make_shards_axis(size_t num_shards, int64_t axis)
+    {
         // 1. Get current shape and validate 
         Shape current_shape = this->shape();
         if (axis < 0 || axis >= current_shape.dims.size()) 
@@ -190,6 +243,50 @@ namespace OwnTensor
             shards.push_back(std::move(shard)); 
         } 
         return shards; 
+    }
+
+    std::vector<Tensor> Tensor::make_shards_inplace_axis(size_t num_shards, int64_t axis) {
+        Shape old_shape = this->shape();
+        Stride old_stride = ViewUtils::compute_strides(old_shape);
+
+        int64_t dim_size = old_shape.dims[axis];
+        int64_t shard_dim_size = dim_size / num_shards;
+
+        std::vector<Tensor> shards;
+        shards.reserve(num_shards);
+
+        for (int i = 0; i < num_shards; ++i) {
+            int64_t start = i * shard_dim_size;
+
+            Shape new_shape = old_shape;
+            new_shape.dims[axis] = shard_dim_size;
+            Stride new_stride = old_stride;
+            int64_t shard_offset = this->storage_offset() + start * old_stride.strides[axis];
+
+            uint8_t* raw_shard_ptr = this->impl_->mutable_storage().data_ptr();
+            DataPtr alias_ptr(raw_shard_ptr, DataPtrDeleter(nullptr));
+
+            intrusive_ptr<Storage> alias_storage = make_intrusive<Storage>(
+                std::move(alias_ptr),
+                this->impl_->storage().nbytes(),
+                this->dtype(),
+                this->device(),
+                nullptr
+            );
+
+            intrusive_ptr<TensorImpl> shard_impl = make_intrusive<TensorImpl>(
+                alias_storage,
+                new_shape,
+                new_stride,
+                shard_offset,
+                this->dtype(),
+                this->device(),
+                intrusive_ptr<TensorImpl>(this->unsafeGetTensorImpl())
+            );
+
+            shards.push_back(Tensor(std::move(shard_impl)));
+        }
+        return shards;
     }
 
     std::vector<Tensor> Tensor::make_shards(size_t num_shards, bool row_major)
@@ -240,10 +337,10 @@ namespace OwnTensor
         int64_t total_req_elements = 0;
 
 
-        for (const auto& s : shard_shapes)
+        for (const Shape& s : shard_shapes)
         {
             int64_t shape_numel = 1;
-            for (auto d : s.dims) shape_numel *= d;
+            for (int64_t d : s.dims) shape_numel *= d;
             total_req_elements += shape_numel;
         }
 
@@ -306,17 +403,23 @@ namespace OwnTensor
         std::vector<Tensor> shards;
         shards.reserve(num_shards);
 
+        std::shared_ptr<autograd::ShardingBackward> grad_fn;
+        if (this->requires_grad()) {
+            grad_fn = std::make_shared<autograd::ShardingBackward>(this->shape(), num_shards);
+            Tensor& self_mut = const_cast<Tensor&>(*this);
+            grad_fn->set_next_edge(0, autograd::get_grad_edge(self_mut));
+        }
+
         for (size_t i = 0; i < num_shards; ++i)
         {
             size_t shard_offset_elems =
                 this->storage_offset() + i * shard_elems;  // ELEMENT offset
             Shape shard_shape = Shape({ {1, (int64_t)shard_elems} });
-            // Storage shard_storage = this->impl_->mutable_storage();
-
+            
             // Create aliased storage
             uint8_t* raw_ptr = this->impl_->mutable_storage().data_ptr();
             DataPtr alias_ptr(raw_ptr, DataPtrDeleter(nullptr));
-            Storage alias_storage(
+            intrusive_ptr<Storage> alias_storage = make_intrusive<Storage>(
                 std::move(alias_ptr),
                 this->impl_->storage().nbytes(),
                 this->dtype(),
@@ -325,7 +428,7 @@ namespace OwnTensor
             );
 
             intrusive_ptr<TensorImpl> shard_impl = make_intrusive<TensorImpl>(         
-                make_intrusive<Storage>(std::move(alias_storage)),            // shared (aliased) storage
+                alias_storage,            // shared (aliased) storage
                 Shape(shard_shape),
                 ViewUtils::compute_strides(shard_shape),
                 static_cast<int64_t>(shard_offset_elems),   // view offset
@@ -335,6 +438,12 @@ namespace OwnTensor
             );
 
             Tensor shard(std::move(shard_impl));
+
+            if (grad_fn) {
+                shard.set_grad_fn(grad_fn);
+                shard.set_output_nr(i);
+                shard.set_requires_grad(true);
+            }
 
             shards.push_back(std::move(shard));
         }
@@ -349,10 +458,10 @@ namespace OwnTensor
             return this->t().contiguous().make_shards_inplace_cust(shard_shapes, true);
         }
         int64_t total_req_elements = 0;
-        for (const auto& s : shard_shapes)
+        for (const Shape& s : shard_shapes)
         {
             int64_t shape_numel = 1;
-            for (auto d : s.dims) shape_numel *= d;
+            for (int64_t d : s.dims) shape_numel *= d;
             total_req_elements += shape_numel;
         }
 
@@ -367,20 +476,23 @@ namespace OwnTensor
         std::vector<Tensor> shards;
         shards.reserve(shard_shapes.size());
 
+        std::shared_ptr<autograd::ShardingBackward> grad_fn;
+        if (this->requires_grad()) {
+            grad_fn = std::make_shared<autograd::ShardingBackward>(this->shape(), shard_shapes);
+            Tensor& self_mut = const_cast<Tensor&>(*this);
+            grad_fn->set_next_edge(0, autograd::get_grad_edge(self_mut));
+        }
+
         size_t shard_offset_elems = 0;
 
         for (size_t i = 0; i < shard_shapes.size(); ++i)
         {
             Shape shard_shape = shard_shapes[i];
 
-            // Calculate byte offset: (Current Element Offset * Bytes Per Element)
-            size_t byte_offset = shard_offset_elems * dtype_size(this->dtype());
-            // Storage shard_storage = this->impl_->storage();
-
              // Create aliased storage
              uint8_t* raw_ptr = this->impl_->mutable_storage().data_ptr();
              DataPtr alias_ptr(raw_ptr, DataPtrDeleter(nullptr));
-             Storage alias_storage(
+             intrusive_ptr<Storage> alias_storage = make_intrusive<Storage>(
                  std::move(alias_ptr),
                  this->impl_->storage().nbytes(),
                  this->dtype(),
@@ -389,16 +501,22 @@ namespace OwnTensor
              );
  
              intrusive_ptr<TensorImpl> shard_impl = make_intrusive<TensorImpl>(  
-                make_intrusive<Storage>(std::move(alias_storage)),            // shared (aliased) storage
-                shard_shape,
-                ViewUtils::compute_strides(shard_shape),
-                static_cast<int64_t>(shard_offset_elems),   
-                this->dtype(),
-                this->device(),
-                intrusive_ptr<TensorImpl>(this->unsafeGetTensorImpl())
+                 alias_storage,            // shared (aliased) storage
+                 shard_shape,
+                 ViewUtils::compute_strides(shard_shape),
+                 static_cast<int64_t>(shard_offset_elems),   
+                 this->dtype(),
+                 this->device(),
+                 intrusive_ptr<TensorImpl>(this->unsafeGetTensorImpl())
              );
 
             Tensor shard(std::move(shard_impl));
+
+            if (grad_fn) {
+                shard.set_grad_fn(grad_fn);
+                shard.set_output_nr(i);
+                shard.set_requires_grad(true);
+            }
 
             // Increment the tracker by the number of elements in the shard just created
             shard_offset_elems += shard.numel();
@@ -413,7 +531,7 @@ namespace OwnTensor
         size_t total_src_elems = this->numel();
         size_t elem_size = dtype_size(this->dtype());
 
-        for (auto& dest : destinations)
+        for (Tensor& dest : destinations)
         {
              size_t dest_elems = dest.numel();
              
@@ -435,7 +553,7 @@ namespace OwnTensor
              
              DataPtr alias_ptr(raw_ptr, DataPtrDeleter(nullptr));
              
-             Storage alias_storage(
+             intrusive_ptr<Storage> alias_storage = make_intrusive<Storage>(
                  std::move(alias_ptr),
                  this->impl_->storage().nbytes(),
                  this->dtype(),
@@ -444,14 +562,13 @@ namespace OwnTensor
              );
              
              intrusive_ptr<TensorImpl> shard_impl = make_intrusive<TensorImpl>(
-                make_intrusive<Storage>(std::move(alias_storage)), 
-                // std::move(alias_storage),
-                dest.shape(), 
-                ViewUtils::compute_strides(dest.shape()), 
-                static_cast<int64_t>(view_elem_offset),
-                this->dtype(),
-                this->device(),
-                intrusive_ptr<TensorImpl>(this->unsafeGetTensorImpl())
+                 alias_storage, 
+                 dest.shape(), 
+                 ViewUtils::compute_strides(dest.shape()), 
+                 static_cast<int64_t>(view_elem_offset),
+                 this->dtype(),
+                 this->device(),
+                 intrusive_ptr<TensorImpl>(this->unsafeGetTensorImpl())
              );
              
              Tensor shard_view(std::move(shard_impl));

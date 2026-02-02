@@ -413,7 +413,7 @@ namespace OwnTensor
         // In new architecture, storage ownership is managed by Storage/TensorImpl
         // Views share storage but don't have unique ownership
         if (!impl_) return false;
-        return impl_->use_count() == 1;
+        return impl_->storage().owns_data();
     }
     
     bool Tensor::owns_grad() const {

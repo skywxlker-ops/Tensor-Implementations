@@ -44,6 +44,7 @@ private:
     size_t nbytes_;              // Total bytes allocated
     Allocator* allocator_;       // Allocator used for this storage
     DeviceIndex device_;         // Device where storage resides
+    bool owns_data_ = true;
 
 public:
     // ========================================================================
@@ -131,7 +132,24 @@ public:
      * Check if storage is initialized (has data)
      */
     bool is_valid() const { return data_ptr_.get() != nullptr; }
-    
+
+    /**
+     * Check if the storage owns the data
+     */
+    bool owns_data() const { return owns_data_; }
+
+    /**
+     * Set the status of the data ownership of the Storage
+     */
+    void set_owns_data(bool owns) { owns_data_ = owns; }
+
+    /**
+     * Check if a storage is shared
+     */
+    bool is_shared() const {
+        return use_count() > 1;
+    }
+ 
     // ========================================================================
     // Mutators
     // ========================================================================
@@ -142,7 +160,6 @@ public:
      */
     void set_data_ptr(DataPtr new_ptr);
 
-    
     void set_device(DeviceIndex device);
 
     void set_allocator(Allocator* alloc);
