@@ -189,6 +189,19 @@ public:
     const T* data() const {
         return reinterpret_cast<const T*>(data());
     }
+    // ========================================================================
+    //  Accessors extension (added while working on parallellism utils)
+    // ========================================================================
+    /**
+     * Check if a tensor is a view of a tensor or not
+     */
+    bool is_view() const { return base_impl_.get() != nullptr; }
+
+    /**
+     * Get the base Impl object of a tensor
+     */
+    TensorImpl* base_impl() const { return base_impl_.get(); }
+
     
     // ========================================================================
     // Autograd Methods

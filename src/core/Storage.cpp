@@ -86,6 +86,8 @@ Storage::Storage(DataPtr data_ptr, size_t nbytes, Dtype dtype,
     if (allocator_ == nullptr) {
         allocator_ = AllocatorRegistry::get_allocator(device.device);
     }
+
+    owns_data_ = data_ptr.get_deleter().allocator != nullptr;
 }
 
 // ============================================================================
