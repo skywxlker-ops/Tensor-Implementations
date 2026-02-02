@@ -17,3 +17,4 @@
 #include "autograd/backward/GradAccumulator.h"
 #include "autograd/backward/EmbeddingBackward.h"
 #include "autograd/backward/NormalizationBackward.h"
+#include "autograd/backward/ShardingBackward.h"
