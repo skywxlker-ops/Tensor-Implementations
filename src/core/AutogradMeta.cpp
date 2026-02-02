@@ -104,10 +104,8 @@ void AutogradMeta::accumulate_grad(Tensor&& update) {
     if (!grad_) {
         grad_ = std::make_unique<Tensor>(std::move(update));
     } else {
-        // Accumulate: *grad_ = *grad_ + update;
-        // Optimization: if we could do inplace add, that would be better.
-        // But for now, just reduce the locking overhead.
-        *grad_ = operator+(*grad_, update);
+        // Use in-place add to avoid allocation
+        operator+=(*grad_, update);
     }
 }
 

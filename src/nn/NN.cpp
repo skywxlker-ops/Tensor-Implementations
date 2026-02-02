@@ -12,19 +12,30 @@ namespace nn {
 // ============================================================================
 
 std::vector<Tensor> Module::parameters() {
-    return params_;
+    std::vector<Tensor> all_params = params_;
+    for (auto* child : children_) {
+        auto child_params = child->parameters();
+        all_params.insert(all_params.end(), child_params.begin(), child_params.end());
+    }
+    return all_params;
 }
 
 void Module::to(DeviceIndex dev) {
-    // We override to() in leaf modules to update members.
-    // Base class to() just iterates over parameters and moves them.
-    // Note: To actually update members, we need to assign back.
-    // Since parameters() returns by value, we need a better way.
-    // Let's just make to() virtual as well if needed, or let 
-    // leaf modules handle it.
     for (auto& p : parameters()) {
-        p = p.to(dev);
+        if (dev.is_cuda()) {
+            p.to_cuda_(dev.index);
+        } else if (dev.is_cpu()) {
+            p.to_cpu_();
+        }
     }
+}
+
+void Module::register_module(Module& m) {
+    children_.push_back(&m);
+}
+
+void Module::register_module(Module* m) {
+    if (m) children_.push_back(m);
 }
 
 void Module::zero_grad() {
@@ -83,16 +94,7 @@ Tensor Linear::forward(const Tensor& input) {
     return z;
 }
 
-std::vector<Tensor> Linear::parameters() {
-    std::vector<Tensor> p = {weight};
-    if (bias.is_valid()) p.push_back(bias);
-    return p;
-}
-
-void Linear::to(DeviceIndex dev) {
-    weight = weight.to(dev);
-    if (bias.is_valid()) bias = bias.to(dev);
-}
+// parameters() and to() are handled by base Module since parameters are registered.
 
 // ============================================================================
 // ReLU
@@ -127,13 +129,7 @@ Tensor Embedding::forward(const Tensor& input) {
     return autograd::embedding(weight, input);
 }
 
-std::vector<Tensor> Embedding::parameters() {
-    return {weight};
-}
-
-void Embedding::to(DeviceIndex dev) {
-    weight = weight.to(dev);
-}
+// parameters() and to() are handled by base Module.
 
 // ============================================================================
 // Sequential
@@ -147,8 +143,7 @@ Sequential::Sequential(std::initializer_list<Module*> modules) {
 
 void Sequential::add(std::shared_ptr<Module> module) {
     modules_.push_back(module);
-    // REMOVED: stale parameter flattening here. 
-    // Sequential::parameters() is recursive and will find them dynamically.
+    register_module(module.get());
 }
 
 Tensor Sequential::forward(const Tensor& input) {
@@ -159,20 +154,7 @@ Tensor Sequential::forward(const Tensor& input) {
     return x;
 }
 
-std::vector<Tensor> Sequential::parameters() {
-    std::vector<Tensor> all_params;
-    for (auto& m : modules_) {
-        auto sub_params = m->parameters();
-        all_params.insert(all_params.end(), sub_params.begin(), sub_params.end());
-    }
-    return all_params;
-}
-
-void Sequential::to(DeviceIndex dev) {
-    for (auto& m : modules_) {
-        m->to(dev);
-    }
-}
+// parameters() and to() are handled by base Module through recursive children_ tracking.
 
 // ============================================================================
 // Loss Functions

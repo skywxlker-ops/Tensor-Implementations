@@ -33,8 +33,11 @@ public:
     
 protected:
     std::vector<Tensor> params_;
+    std::vector<Module*> children_;
     
     void register_parameter(Tensor p);
+    void register_module(Module& m);
+    void register_module(Module* m);
 };
 
 // ============================================================================
@@ -49,8 +52,6 @@ public:
     Linear(int in_features, int out_features, bool bias = true);
     
     Tensor forward(const Tensor& input) override;
-    std::vector<Tensor> parameters() override;
-    void to(DeviceIndex dev) override;
 };
 
 class ReLU : public Module {
@@ -66,8 +67,6 @@ public:
     Embedding(int num_embeddings, int embedding_dim, int padding_idx = -1);
     
     Tensor forward(const Tensor& input) override;
-    std::vector<Tensor> parameters() override;
-    void to(DeviceIndex dev) override;
 };
 
 class LayerNorm : public Module {
@@ -79,8 +78,6 @@ public:
     LayerNorm(int normalized_shape, float eps = 1e-5);
     
     Tensor forward(const Tensor& input) override;
-    std::vector<Tensor> parameters() override;
-    void to(DeviceIndex dev) override;
 };
 
 // ============================================================================
@@ -98,8 +95,6 @@ public:
     void add(std::shared_ptr<Module> module);
     
     Tensor forward(const Tensor& input) override;
-    std::vector<Tensor> parameters() override;
-    void to(DeviceIndex dev) override;
 };
 
 // ============================================================================

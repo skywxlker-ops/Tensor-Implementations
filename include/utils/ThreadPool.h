@@ -17,6 +17,13 @@ namespace utils {
 class ThreadPool {
 public:
     explicit ThreadPool(size_t threads) : stop_(false) {
+        char* env_threads = std::getenv("OWNTENSOR_NUM_THREADS");
+        if (env_threads) {
+            try {
+                threads = std::stoul(env_threads);
+            } catch (...) {}
+        }
+        
         for(size_t i = 0; i < threads; ++i)
             workers_.emplace_back(
                 [this] {
@@ -37,6 +44,21 @@ public:
                     }
                 }
             );
+    }
+
+    /**
+     * @brief Enqueue a task without returning a future (lower overhead).
+     */
+    template<class F, class... Args>
+    void enqueue_detach(F&& f, Args&&... args) {
+        {
+            std::unique_lock<std::mutex> lock(queue_mutex_);
+            if(stop_)
+                throw std::runtime_error("enqueue on stopped ThreadPool");
+
+            tasks_.emplace(std::bind(std::forward<F>(f), std::forward<Args>(args)...));
+        }
+        condition_.notify_one();
     }
 
     template<class F, class... Args>

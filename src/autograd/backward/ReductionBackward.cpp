@@ -20,22 +20,24 @@ std::vector<Tensor> SumBackward::apply(std::vector<Tensor>&& grads) {
     
     const Tensor& grad_output = grads[0];
     
-    // Broadcast grad_output to input_shape
-    Tensor grad_input = Tensor::ones(input_shape_, 
+    // Scale factor
+    double scale = 1.0;
+    if (grad_output.ndim() == 0 || grad_output.numel() == 1) {
+        if (grad_output.is_cuda()) {
+#ifdef WITH_CUDA
+            scale = static_cast<double>(grad_output.to_cpu().data<float>()[0]);
+#endif
+        } else {
+            scale = static_cast<double>(*grad_output.data<float>());
+        }
+    }
+
+    // Single-pass creation of the gradient tensor
+    Tensor grad_input = Tensor::full(input_shape_, 
         TensorOptions()
             .with_dtype(grad_output.dtype())
-            .with_device(grad_output.device()));
-    
-    // Scale by grad_output value (if scalar)
-    if (grad_output.ndim() == 0 || grad_output.numel() == 1) {
-        double grad_val;
-        if (grad_output.is_cuda()) {
-            grad_val = static_cast<double>(grad_output.to_cpu().data<float>()[0]);
-        } else {
-            grad_val = static_cast<double>(*grad_output.data<float>());
-        }
-        grad_input = grad_input * grad_val;
-    }
+            .with_device(grad_output.device()),
+        static_cast<float>(scale));
     
     return {grad_input};
 }
@@ -54,13 +56,8 @@ std::vector<Tensor> MeanBackward::apply(std::vector<Tensor>&& grads) {
     
     const Tensor& grad_output = grads[0];
     
-    // grad_input = grad_output / numel
-    Tensor grad_input = Tensor::ones(input_shape_,
-        TensorOptions()
-            .with_dtype(grad_output.dtype())
-            .with_device(grad_output.device()));
-    
-    // Scale by grad_output / numel
+    // Scale factor (1.0 / numel)
+    double scale = 1.0 / static_cast<double>(numel_);
     if (grad_output.ndim() == 0 || grad_output.numel() == 1) {
         double grad_val;
         if (grad_output.is_cuda()) {
@@ -68,9 +65,15 @@ std::vector<Tensor> MeanBackward::apply(std::vector<Tensor>&& grads) {
         } else {
             grad_val = static_cast<double>(*grad_output.data<float>());
         }
-        double scale = grad_val / static_cast<double>(numel_);
-        grad_input = grad_input * scale;
+        scale *= grad_val;
     }
+
+    // Single-pass creation
+    Tensor grad_input = Tensor::full(input_shape_,
+        TensorOptions()
+            .with_dtype(grad_output.dtype())
+            .with_device(grad_output.device()),
+        static_cast<float>(scale));
     
     return {grad_input};
 }
