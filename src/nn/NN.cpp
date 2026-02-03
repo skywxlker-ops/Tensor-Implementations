@@ -105,6 +105,14 @@ Tensor ReLU::forward(const Tensor& input) {
 }
 
 // ============================================================================
+// GeLU
+// ============================================================================
+
+Tensor GeLU::forward(const Tensor& input) {
+    return autograd::gelu(input);
+}
+
+// ============================================================================
 // Embedding
 // ============================================================================
 
@@ -136,6 +144,12 @@ Tensor Embedding::forward(const Tensor& input) {
 // ============================================================================
 
 Sequential::Sequential(std::initializer_list<Module*> modules) {
+    for (auto* m : modules) {
+        add(std::shared_ptr<Module>(m));
+    }
+}
+
+Sequential::Sequential(const std::vector<Module*>& modules) {
     for (auto* m : modules) {
         add(std::shared_ptr<Module>(m));
     }

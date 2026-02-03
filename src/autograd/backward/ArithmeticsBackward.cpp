@@ -93,5 +93,32 @@ std::vector<Tensor> PowBackward::apply(std::vector<Tensor>&& grads) {
     return {grads[0] * static_cast<double>(exponent_) * derived};
 }
 
+// ============================================================================
+// Scalar Arithmetic Backward Nodes
+// ============================================================================
+
+std::vector<Tensor> ScalarAddBackward::apply(std::vector<Tensor>&& grads) {
+    return {grads[0]};
+}
+
+std::vector<Tensor> ScalarSubBackward::apply(std::vector<Tensor>&& grads) {
+    if (tensor_on_lhs_) return {grads[0]};
+    return {grads[0] * -1.0};
+}
+
+std::vector<Tensor> ScalarMulBackward::apply(std::vector<Tensor>&& grads) {
+    return {grads[0] * scalar_};
+}
+
+std::vector<Tensor> ScalarDivBackward::apply(std::vector<Tensor>&& grads) {
+    if (tensor_on_lhs_) {
+        return {grads[0] / scalar_};
+    } else {
+        // y = s / x  => dy/dx = -s / x^2
+        Tensor x_sq = saved_input_ * saved_input_;
+        return {grads[0] * (-scalar_) / x_sq};
+    }
+}
+
 } // namespace autograd
 } // namespace OwnTensor

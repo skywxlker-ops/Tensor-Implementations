@@ -49,6 +49,7 @@ public:
     Tensor weight;
     Tensor bias;
     
+    Linear() = default;  // Default constructor for delayed initialization
     Linear(int in_features, int out_features, bool bias = true);
     
     Tensor forward(const Tensor& input) override;
@@ -59,11 +60,17 @@ public:
     Tensor forward(const Tensor& input) override;
 };
 
+class GeLU : public Module {
+public:
+    Tensor forward(const Tensor& input) override;
+};
+
 class Embedding : public Module {
 public:
     Tensor weight;
     int padding_idx;
     
+    Embedding() = default;  // Default constructor for delayed initialization
     Embedding(int num_embeddings, int embedding_dim, int padding_idx = -1);
     
     Tensor forward(const Tensor& input) override;
@@ -75,6 +82,7 @@ public:
     Tensor bias;
     float eps;
     
+    LayerNorm() = default;  // Default constructor for delayed initialization
     LayerNorm(int normalized_shape, float eps = 1e-5);
     
     Tensor forward(const Tensor& input) override;
@@ -90,6 +98,7 @@ private:
     
 public:
     Sequential(std::initializer_list<Module*> modules);
+    Sequential(const std::vector<Module*>& modules);  // Vector-based constructor
     
     // Templated add for building incrementally?
     void add(std::shared_ptr<Module> module);
