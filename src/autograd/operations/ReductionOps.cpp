@@ -8,13 +8,13 @@ namespace autograd {
 
 Tensor sum(const Tensor& x) {
     return make_unary_op<SumBackward>(x,
-        [](const Tensor& input) { return reduce_sum(input); },
+        [](const Tensor& input) { return reduce_sum(input.detach()); },
         x.shape());  // Pass shape to SumBackward constructor
 }
 
 Tensor mean(const Tensor& x) {
     return make_unary_op<MeanBackward>(x,
-        [](const Tensor& input) { return reduce_mean(input); },
+        [](const Tensor& input) { return reduce_mean(input.detach()); },
         x.shape(), x.numel());  // Pass shape and numel to MeanBackward constructor
 }
 

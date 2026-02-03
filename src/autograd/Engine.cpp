@@ -75,32 +75,20 @@ void fast_backward_sequential(Node* root_node, Tensor root_grad, uint32_t root_s
     tl_buffers.clear();
     auto& q = tl_buffers.queue;
     
-    // DEBUG INSTRUMENTATION
-    // std::cout << "\n=== FAST BACKWARD START ===" << std::endl;
-    // std::cout << "Root: " << typeid(*root_node).name() << std::endl;
-
-    // 1. Discovery (BFS)
+    // Discovery (BFS)
     q.push_back(root_node);
     size_t head = 0;
     while (head < q.size()) {
         Node* curr = q[head++];
-        // std::cout << "BFS Visiting " << (head-1) << ": " << typeid(*curr).name() << " Edges: " << curr->next_edges().size() << std::endl; 
         for (const auto& edge : curr->next_edges()) {
             if (edge.is_valid()) {
                 Node* next = edge.function.get();
                 if (find_node_id(q, next) == -1) {
                     q.push_back(next);
-                    // std::cout << "  -> Discovered: " << typeid(*next).name() << std::endl;
                 }
-            } else {
-                // std::cout << "  -> Invalid Edge" << std::endl;
             }
         }
     }
-    // std::cout << "Graph size: " << q.size() << std::endl;
-    // for(size_t i=0; i<q.size(); ++i) {
-    //     std::cout << " Node " << i << ": " << typeid(*q[i]).name() << std::endl;
-    // }
 
     // 2. Prepare states (using tl_buffers to avoid heap allocs)
     tl_buffers.prepare(q.size());
@@ -117,11 +105,6 @@ void fast_backward_sequential(Node* root_node, Tensor root_grad, uint32_t root_s
             }
         }
     }
-    
-    // std::cout << "Dependencies:" << std::endl;
-    // for(size_t i=0; i<q.size(); ++i) {
-    //     std::cout << " Node " << i << ": " << deps[i] << std::endl;
-    // }
 
     // 4. Seed Root
     inputs[0].resize(root_slot + 1);
@@ -138,14 +121,9 @@ void fast_backward_sequential(Node* root_node, Tensor root_grad, uint32_t root_s
         size_t idx = ready[ready_head++];
         Node* node = q[idx];
         
-        // std::cout << "Executing Node " << idx << " (" << typeid(*node).name() << ")" << std::endl;
-
         variable_list node_outputs;
         if (has_g[idx]) {
             node_outputs = (*node)(std::move(inputs[idx]));
-            // std::cout << "  Output size: " << node_outputs.size() << std::endl;
-        } else {
-            // std::cout << "  SKIPPING EXEC (No Grad?)" << std::endl;
         }
         node->release_saved_variables();
 
@@ -166,19 +144,12 @@ void fast_backward_sequential(Node* root_node, Tensor root_grad, uint32_t root_s
                     operator+=(inputs[next_idx][slot], node_outputs[i]);
                 }
                 has_g[next_idx] = true;
-                // std::cout << "  Propagating to Node " << next_idx << " Slot " << slot << std::endl;
-            } else {
-                 // std::cout << "  Wait: output " << i << " invalid? Or size mismatch?" << std::endl;
             }
-
-            // std::cout << "  Decrementing dep for Node " << next_idx << " (" << deps[next_idx] << " -> " << (deps[next_idx]-1) << ")" << std::endl;
             if (--deps[next_idx] == 0) {
                 ready.push_back(next_idx);
-                // std::cout << "  -> Ready: Node " << next_idx << std::endl;
             }
         }
     }
-    // std::cout << "=== FAST BACKWARD END ===\n" << std::endl;
     
     // Clear TL buffers to release large tensor references
     tl_buffers.clear();
@@ -311,7 +282,6 @@ void backward(const Tensor& root, const Tensor* grad_output) {
     Tensor root_grad = grad_output ? *grad_output : (root.numel() == 1 ? Tensor::ones(root.shape(), root.opts()) : throw std::runtime_error("backward: non-scalar requires grad_output"));
 
     if (!root_fn) {
-        // std::cout << "DEBUG: Engine::backward - No grad_fn, accumulating in root." << std::endl;
         if (root.unsafeGetTensorImpl()->has_autograd_meta()) {
             auto* meta = static_cast<AutogradMeta*>(root.unsafeGetTensorImpl()->autograd_meta());
             if (meta->has_grad()) meta->set_grad(operator+(meta->mutable_grad(root.unsafeGetTensorImpl()), root_grad));

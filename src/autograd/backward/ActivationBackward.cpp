@@ -43,7 +43,7 @@ std::vector<Tensor> ReluBackward::apply(std::vector<Tensor>&& grads) {
              g_in[i] = (x[i] > 0.0f) ? g_out[i] : 0.0f;
          }
     } else {
-         Tensor mask = saved_input_ > 0.0f;
+         Tensor mask = saved_input_.detach() > 0.0f;
          grad_input = grad_output * mask;
     }
     
@@ -63,7 +63,7 @@ std::vector<Tensor> GeLUBackward::apply(std::vector<Tensor>&& grads) {
     }
     
     const Tensor& grad_output = grads[0];
-    const Tensor& x = saved_input_;
+    const Tensor& x = saved_input_.detach();
     
     // Use fused CUDA kernel for GPU tensors (much faster)
     if (x.device().is_cuda() && x.dtype() == Dtype::Float32) {
@@ -129,7 +129,7 @@ std::vector<Tensor> SigmoidBackward::apply(std::vector<Tensor>&& grads) {
          grad_x = Tensor(saved_output_.shape(), grad_output.opts());
          cuda::sigmoid_backward_cuda(grad_output.data<float>(), saved_output_.data<float>(), grad_x.data<float>(), grad_x.numel());
     } else {
-         grad_x = grad_output * saved_output_ * (1.0f - saved_output_);
+         grad_x = grad_output * saved_output_.detach() * (1.0f - saved_output_.detach());
     }
     
     return {grad_x};
@@ -162,9 +162,9 @@ std::vector<Tensor> SoftmaxBackward::apply(std::vector<Tensor>&& grads) {
          
          cuda::softmax_backward_cuda(grad_output.data<float>(), s.data<float>(), grad_x.data<float>(), rows, cols);
     } else {
-         Tensor gs = grad_output * s;
+         Tensor gs = grad_output * saved_output_.detach();
          Tensor sum_gs = reduce_sum(gs, {dim_}, true);
-         grad_x = s * (grad_output - sum_gs);
+         grad_x = saved_output_.detach() * (grad_output - sum_gs);
     }
     
     return {grad_x};

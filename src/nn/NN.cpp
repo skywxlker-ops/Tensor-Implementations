@@ -70,7 +70,7 @@ Linear::Linear(int in_features, int out_features, bool use_bias) {
     // scaling by 1/sqrt(fan_in) for uniform or normal
     float stdv = 1.0f / std::sqrt(static_cast<float>(in_features));
     
-    weight = Tensor::randn<float>(Shape{{in_features, out_features}}, opts, 1.0f) * stdv;     
+    weight = Tensor::randn<float>(Shape{{in_features, out_features}}, opts, 42, stdv);
     
     if (use_bias) {
         bias = Tensor::zeros(Shape{{out_features}}, opts);
