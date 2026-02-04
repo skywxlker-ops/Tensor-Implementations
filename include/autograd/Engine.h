@@ -56,6 +56,15 @@ ExecutionMode get_execution_mode();
 void set_execution_mode(ExecutionMode mode);
 
 /**
+ * @brief Set the threshold for automatic mode switching.
+ * 
+ * Graphs with fewer nodes than this threshold will always execute 
+ * in SEQUENTIAL mode even if PARALLEL mode is requested.
+ * Default is 50.
+ */
+void set_parallel_threshold(size_t threshold);
+
+/**
  * @brief Perform topological sort on computational graph.
  * 
  * @param root Root tensor to start from

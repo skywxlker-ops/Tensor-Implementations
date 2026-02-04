@@ -14,7 +14,7 @@ namespace autograd {
 
 Tensor matmul(const Tensor& a, const Tensor& b) {
     return make_binary_op<MatmulBackward>(a, b,
-        [](const Tensor& x, const Tensor& y) { return OwnTensor::matmul(x, y); },
+        [](const Tensor& x, const Tensor& y) { return OwnTensor::matmul(x.detach(), y.detach()); },
         a, b);  // Pass a, b to MatmulBackward constructor
 }
 
@@ -42,9 +42,9 @@ Tensor linear(const Tensor& input, const Tensor& weight, const Tensor& bias) {
 #endif
         // We use raw Tensor operations here, not autograd wrappers
         // to avoid creating intermediate nodes
-        Tensor out = OwnTensor::matmul(x, w);
+        Tensor out = OwnTensor::matmul(x.detach(), w.detach());
         if (b.is_valid()) {
-            out = out + b;
+            out = out + b.detach();
         }
         return out;
     };
@@ -71,6 +71,7 @@ Tensor linear(const Tensor& input, const Tensor& weight, const Tensor& bias) {
         }
         
         result.set_grad_fn(grad_fn);
+        result.set_requires_grad(true);
     }
     
     return result;

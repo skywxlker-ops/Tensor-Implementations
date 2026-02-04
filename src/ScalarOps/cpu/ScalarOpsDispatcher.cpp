@@ -4,6 +4,7 @@
 #include "ops/ScalarOps.h"
 #include "dtype/Types.h"
 #include "core/TensorDispatch.h"
+#include "autograd/operations/ArithmeticsOps.h"
 #include <driver_types.h>
 #include "device/DeviceCore.h" //✨✨✨
 
@@ -128,20 +129,30 @@ Tensor operator/=(Tensor&& t, S s) { return t /= s; }
 
 template<typename S>
 Tensor operator+(const Tensor& a, S s) {
-    // std::cout<<"hi"<<std::endl;
-    // std::cout<<"hi"<<std::endl;
+    if (a.requires_grad()) {
+        return autograd::add(a, static_cast<float>(s));
+    }
     return a.device().is_cuda() ? cuda_add_copy(a, to_f64(s), OwnTensor::cuda::getCurrentStream()) : cpu_add_copy(a, to_f64(s)); //✨✨✨
 }
 template<typename S>
 Tensor operator-(const Tensor& a, S s) {
+    if (a.requires_grad()) {
+        return autograd::sub(a, static_cast<float>(s));
+    }
     return a.device().is_cuda() ? cuda_sub_copy(a, to_f64(s), OwnTensor::cuda::getCurrentStream()) : cpu_sub_copy(a, to_f64(s)); //✨✨✨
 }
 template<typename S>
 Tensor operator*(const Tensor& a, S s) {
+    if (a.requires_grad()) {
+        return autograd::mul(a, static_cast<float>(s));
+    }
     return a.device().is_cuda() ? cuda_mul_copy(a, to_f64(s), OwnTensor::cuda::getCurrentStream()) : cpu_mul_copy(a, to_f64(s)); //✨✨✨
 }
 template<typename S>
 Tensor operator/(const Tensor& a, S s) {
+    if (a.requires_grad()) {
+        return autograd::div(a, static_cast<float>(s));
+    }
     const double sd = to_f64(s);
     if (!a.device().is_cuda() && is_integer_dtype(a.dtype()) && sd == 0.0)
         throw std::runtime_error("Division by zero");
@@ -153,6 +164,9 @@ Tensor operator+(S s, const Tensor& a) { return a + s; }
 
 template<typename S>
 Tensor operator-(S s, const Tensor& a) {
+    if (a.requires_grad()) {
+        return autograd::sub(static_cast<float>(s), a);
+    }
     return a.device().is_cuda() ? cuda_sub_copy_scalar_tensor(to_f64(s), a, OwnTensor::cuda::getCurrentStream()) //✨✨✨
                                 : cpu_sub_copy_scalar_tensor(to_f64(s), a);
 }
@@ -162,6 +176,9 @@ Tensor operator*(S s, const Tensor& a) { return a * s; }
 
 template<typename S>
 Tensor operator/(S s, const Tensor& a) {
+    if (a.requires_grad()) {
+        return autograd::div(static_cast<float>(s), a);
+    }
     return a.device().is_cuda() ? cuda_div_copy_scalar_tensor(to_f64(s), a, OwnTensor::cuda::getCurrentStream()) //✨✨✨
                                 : cpu_div_copy_scalar_tensor(to_f64(s), a);
 }

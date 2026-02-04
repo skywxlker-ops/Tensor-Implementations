@@ -8,25 +8,25 @@ namespace autograd {
 
 Tensor add(const Tensor& a, const Tensor& b) {
     return make_binary_op<AddBackward>(a, b,
-        [](const Tensor& x, const Tensor& y) { return operator+(x, y); },
+        [](const Tensor& x, const Tensor& y) { return operator+(x.detach(), y.detach()); },
         a, b);
 }
 
 Tensor mul(const Tensor& a, const Tensor& b) {
     return make_binary_op<MulBackward>(a, b,
-        [](const Tensor& x, const Tensor& y) { return operator*(x, y); },
+        [](const Tensor& x, const Tensor& y) { return operator*(x.detach(), y.detach()); },
         a, b);  // Pass a, b to MulBackward constructor
 }
 
 Tensor sub(const Tensor& a, const Tensor& b) {
     return make_binary_op<SubBackward>(a, b,
-        [](const Tensor& x, const Tensor& y) { return operator-(x, y); },
+        [](const Tensor& x, const Tensor& y) { return operator-(x.detach(), y.detach()); },
         a, b);
 }
 
 Tensor div(const Tensor& a, const Tensor& b) {
     return make_binary_op<DivBackward>(a, b,
-        [](const Tensor& x, const Tensor& y) { return operator/(x, y); },
+        [](const Tensor& x, const Tensor& y) { return operator/(x.detach(), y.detach()); },
         a, b);  // Pass a, b to DivBackward constructor
 }
 

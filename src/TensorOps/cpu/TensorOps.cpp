@@ -3,6 +3,7 @@
 #include "ops/helpers/BroadcastUtils.h"
 #include "ops/TensorOps.h"
 #include "ops/TensorOps.cuh"
+#include "autograd/operations/BinaryOps.h"
 #include "device/DeviceCore.h"
 #include "dtype/fp4.h"
 #include "dtype/DtypeTraits.h"  //  ADD THIS for promote_dtypes_bool
@@ -29,6 +30,9 @@ static Tensor promote_if_needed(const Tensor& input, Dtype target_dtype) {
 // ============================================================================
 Tensor operator+(const Tensor& lhs, const Tensor& rhs) 
 {
+    if (lhs.requires_grad() || rhs.requires_grad()) {
+        return autograd::add(lhs, rhs);
+    }
     //  1. Determine promoted dtype
     Dtype promoted_dtype = promote_dtypes_bool(lhs.dtype(), rhs.dtype());
     
@@ -69,6 +73,9 @@ Tensor operator+(const Tensor& lhs, const Tensor& rhs)
 // ============================================================================
 Tensor operator-(const Tensor& lhs, const Tensor& rhs) 
 {
+    if (lhs.requires_grad() || rhs.requires_grad()) {
+        return autograd::sub(lhs, rhs);
+    }
     Dtype promoted_dtype = promote_dtypes_bool(lhs.dtype(), rhs.dtype());
     Tensor lhs_promoted = promote_if_needed(lhs, promoted_dtype);
     Tensor rhs_promoted = promote_if_needed(rhs, promoted_dtype);
@@ -103,6 +110,9 @@ Tensor operator-(const Tensor& lhs, const Tensor& rhs)
 // ============================================================================
 Tensor operator*(const Tensor& lhs, const Tensor& rhs) 
 {
+    if (lhs.requires_grad() || rhs.requires_grad()) {
+        return autograd::mul(lhs, rhs);
+    }
     Dtype promoted_dtype = promote_dtypes_bool(lhs.dtype(), rhs.dtype());
     Tensor lhs_promoted = promote_if_needed(lhs, promoted_dtype);
     Tensor rhs_promoted = promote_if_needed(rhs, promoted_dtype);
@@ -137,6 +147,9 @@ Tensor operator*(const Tensor& lhs, const Tensor& rhs)
 // ============================================================================
 Tensor operator/(const Tensor& lhs, const Tensor& rhs) 
 {
+    if (lhs.requires_grad() || rhs.requires_grad()) {
+        return autograd::div(lhs, rhs);
+    }
     //  USE DIVISION-SPECIFIC PROMOTION
     Dtype promoted_dtype = promote_dtypes_division(lhs.dtype(), rhs.dtype());
     
